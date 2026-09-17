@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="1988 Graphics — Graphic design, poster design and print. Based in South Africa." />
+  <title>1988 Graphics</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="assets/images/Favicon.png" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" class="nav__logo" aria-label="1988 Graphics — home">1988 Graphics</a>
+      <button class="nav__toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-menu" role="list">
+        <li><a href="index.html"     class="nav__link active">Work</a></li>
+        <li><a href="about.html"     class="nav__link">About</a></li>
+        <li><a href="contact.html"   class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO — minimal, poster-masthead style
+    ============================================================ -->
+    <section class="hero" aria-label="Introduction">
+      <div class="wrap">
+        <div class="hero__top">
+
+          <!-- Main title column -->
+          <div class="hero__title-col">
+            <div class="hero__kicker">
+              <span class="hero__kicker-rule" aria-hidden="true"></span>
+              <span class="t-stamp">South Africa</span>
+            </div>
+            <h1 class="t-masthead hero__title">
+              1988<br>Graphics
+            </h1>
+          </div>
+
+          <!-- Decorative meta column — crop marks / annotations -->
+          <div class="hero__meta-col" aria-hidden="true">
+            <span class="hero__bracket">[ ]</span>
+            <span class="hero__discipline">Graphic Design / Print / Poster</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Ticker strip -->
+      <div class="hero__ticker" aria-hidden="true">
+        <div class="hero__ticker-inner" id="ticker">
+          <span class="hero__ticker-item">Graphic Design <strong>✦</strong></span>
+          <span class="hero__ticker-item">Poster Design <strong>✦</strong></span>
+          <span class="hero__ticker-item">Logo Design <strong>✦</strong></span>
+          <span class="hero__ticker-item">Print Design <strong>✦</strong></span>
+          <span class="hero__ticker-item">Graphic Design <strong>✦</strong></span>
+          <span class="hero__ticker-item">Poster Design <strong>✦</strong></span>
+          <span class="hero__ticker-item">Logo Design <strong>✦</strong></span>
+          <span class="hero__ticker-item">Print Design <strong>✦</strong></span>
+          <span class="hero__ticker-item">Graphic Design <strong>✦</strong></span>
+          <span class="hero__ticker-item">Poster Design <strong>✦</strong></span>
+          <span class="hero__ticker-item">Logo Design <strong>✦</strong></span>
+          <span class="hero__ticker-item">Print Design <strong>✦</strong></span>
+          <span class="hero__ticker-item">Graphic Design <strong>✦</strong></span>
+          <span class="hero__ticker-item">Poster Design <strong>✦</strong></span>
+          <span class="hero__ticker-item">Logo Design <strong>✦</strong></span>
+          <span class="hero__ticker-item">Print Design <strong>✦</strong></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PORTFOLIO GRID — curated selection, rendered from projects.js
+         ──────────────────────────────────────────────────────────
+         All projects from js/projects.js are shown here.
+         To change the number shown, edit HOME_PREVIEW_COUNT in js/main.js.
+    ============================================================ -->
+    <section aria-label="Selected work">
+      <div class="pf-grid" id="pf-grid" role="list">
+        <!-- Populated by JS from projects.js -->
+      </div>
+    </section>
+
+  <!-- ============================================================
+       CONTACT STRIP — inline above footer
+  ============================================================ -->
+  <section class="contact-strip" aria-label="Get in touch">
+    <div class="wrap">
+      <div class="contact-strip__inner">
+        <h2 class="contact-strip__heading">
+          Like what<br>you see?
+        </h2>
+        <div class="contact-strip__buttons">
+          <a id="strip-email"
+             href="mailto:1988grfx@gmail.com"
+             class="contact-strip-btn contact-strip-btn--primary"
+             aria-label="Send an email">
+            <svg class="contact-strip-btn__icon" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="1"/>
+              <path d="M2 7l10 7 10-7"/>
+            </svg>
+            Email
+          </a>
+          <a id="strip-whatsapp"
+             href="#"
+             class="contact-strip-btn"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Message on WhatsApp">
+            <svg class="contact-strip-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__inner">
+        <span class="footer__logo">1988 Graphics</span>
+        <nav class="footer__links" aria-label="Footer links">
+          <a href="https://www.instagram.com/1988grfx/"
+             class="footer__link"
+             target="_blank"
+             rel="noopener noreferrer">Instagram</a>
+          <a href="mailto:1988grfx@gmail.com"
+             class="footer__link">Email</a>
+          <a href="https://wa.me/27624897134"
+             class="footer__link"
+             target="_blank"
+             rel="noopener noreferrer">WhatsApp</a>
+        </nav>
+        <p class="footer__copy">&copy; <span id="year"></span> 1988 Graphics</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       PROJECT VIEWER (shared with portfolio.html)
+  ============================================================ -->
+  <div class="pv" id="pv" role="dialog" aria-modal="true" aria-label="Project viewer" hidden>
+    <div class="pv__bar">
+      <button class="pv__back" id="pv-back" aria-label="Back to portfolio">
+        <span class="pv__back-arrow" aria-hidden="true">←</span>
+        All Work
+      </button>
+      <div class="pv__nav" aria-label="Project navigation">
+        <button class="pv__nav-btn" id="pv-prev" aria-label="Previous project">← Prev</button>
+        <span  class="pv__counter"  id="pv-counter" aria-live="polite"></span>
+        <button class="pv__nav-btn" id="pv-next" aria-label="Next project">Next →</button>
+      </div>
+    </div>
+    <div class="pv__content" id="pv-content"></div>
+  </div>
+
+  <!-- Image zoom -->
+  <div class="img-zoom" id="img-zoom" aria-modal="true" aria-label="Zoomed image" hidden>
+    <button class="img-zoom__close" id="iz-close" aria-label="Close zoom">Close ×</button>
+    <img src="" alt="" class="img-zoom__img" id="iz-img" />
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio — 1988 Graphics. Poster design, branding and print work based in South Africa." />
+  <title>Portfolio — 1988 Graphics</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" class="nav__logo" aria-label="1988 Graphics — home">1988 Graphics</a>
+      <button class="nav__toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-menu" role="list">
+        <li><a href="index.html"   class="nav__link active">Work</a></li>
+        <li><a href="about.html"   class="nav__link">About</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Page heading -->
+    <section class="page-hed" aria-label="Portfolio">
+      <div class="wrap">
+        <div class="page-hed__inner">
+          <h1 class="t-section-head">Portfolio</h1>
+          <p class="page-hed__sub">
+            Poster design, branding, print &amp; graphic work.<br>
+            More available on request.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter tabs — rendered by JS from PROJECTS categories -->
+    <div class="pf-filters" id="pf-filters" aria-label="Filter by category">
+      <div class="wrap">
+        <div class="pf-filters__inner" role="group" aria-label="Portfolio filters">
+          <!-- Populated by portfolio.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio masonry grid — populated by JS -->
+    <section aria-label="Portfolio work" aria-live="polite">
+      <div class="pf-masonry" id="pf-masonry" role="list">
+        <!-- Items rendered by JS from projects.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__inner">
+        <span class="footer__logo">1988 Graphics</span>
+        <nav class="footer__links" aria-label="Footer links">
+          <a href="https://www.instagram.com/1988grfx/"
+             class="footer__link" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="mailto:1988grfx@gmail.com"
+             class="footer__link">Email</a>
+          <a href="https://wa.me/27624897134"
+             class="footer__link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </nav>
+        <p class="footer__copy">&copy; <span id="year"></span> 1988 Graphics</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       PROJECT VIEWER
+       Full-page overlay — artwork-first presentation.
+       Rendered and controlled by JS.
+  ============================================================ -->
+  <div class="pv" id="pv" role="dialog" aria-modal="true" aria-label="Project viewer" hidden>
+
+    <!-- Top bar -->
+    <div class="pv__bar">
+      <button class="pv__back" id="pv-back" aria-label="Back to portfolio">
+        <span class="pv__back-arrow" aria-hidden="true">←</span>
+        All Work
+      </button>
+      <div class="pv__nav" aria-label="Project navigation">
+        <button class="pv__nav-btn" id="pv-prev" aria-label="Previous project">← Prev</button>
+        <span  class="pv__counter"  id="pv-counter" aria-live="polite"></span>
+        <button class="pv__nav-btn" id="pv-next" aria-label="Next project">Next →</button>
+      </div>
+    </div>
+
+    <!-- Dynamic content injected here by JS -->
+    <div class="pv__content" id="pv-content"></div>
+
+  </div>
+
+  <!-- ============================================================
+       IMAGE ZOOM (full-screen single image)
+  ============================================================ -->
+  <div class="img-zoom" id="img-zoom" aria-modal="true" aria-label="Zoomed image" hidden>
+    <button class="img-zoom__close" id="iz-close" aria-label="Close zoom">Close ×</button>
+    <img src="" alt="" class="img-zoom__img" id="iz-img" />
+  </div>
+
+  <!-- Load project data first, then main script -->
+  <script src="js/config.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

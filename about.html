@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About — 1988 Graphics. Freelance graphic designer based in South Africa." />
+  <title>About — 1988 Graphics</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" class="nav__logo" aria-label="1988 Graphics — home">1988 Graphics</a>
+      <button class="nav__toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-menu" role="list">
+        <li><a href="index.html"     class="nav__link">Work</a></li>
+        <li><a href="about.html"     class="nav__link active">About</a></li>
+        <li><a href="contact.html"   class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="about-section has-halftone" aria-label="About">
+      <div class="wrap">
+        <div class="about-grid">
+
+          <!-- ================================================
+               LEFT — Photo
+          ================================================ -->
+          <div class="about__photo-wrap reveal">
+            <!--
+              REPLACE PLACEHOLDER:
+              When your photo is ready, replace the <div class="about__photo-placeholder">
+              block with:
+
+              <img
+                src="assets/images/portrait.jpg"
+                alt="[Your name], graphic designer"
+                style="width:100%; height:100%; object-fit:cover; display:block;"
+              />
+
+              inside the .about__photo-box div.
+            -->
+            <div class="about__photo-box" role="img" aria-label="Portrait photo — placeholder">
+              <div class="about__photo-placeholder">
+                <p>Photo<br>placeholder</p>
+              </div>
+            </div>
+            <p class="about__photo-caption">1988 Graphics — South Africa</p>
+          </div>
+
+          <!-- ================================================
+               RIGHT — Text
+          ================================================ -->
+          <div class="about__text">
+
+            <p class="t-stamp about__stamp reveal">About</p>
+
+            <h1 class="t-section-head about__intro-head reveal" data-delay="1" style="color: var(--paper);">
+              Freelance<br>Designer.
+            </h1>
+
+            <div class="about__rule" aria-hidden="true"></div>
+
+            <!--
+              EDIT THIS TEXT:
+              Replace the paragraph below with your own introduction.
+              Keep it short — the work should speak for itself.
+            -->
+            <p class="about__body reveal">
+              Freelance graphic designer with a background in print production and design. I create posters, branding and print-focused graphics with a strong preference for bold, raw and unconventional visual styles.
+            </p>
+
+            <p class="about__body reveal" data-delay="1">
+              Based in South Africa. Working with clients locally and internationally.
+            </p>
+
+            <div class="about__rule" aria-hidden="true"></div>
+
+            <p class="t-stamp about__stamp reveal">What I do</p>
+
+            <ul class="services-list reveal" data-delay="1" aria-label="Services">
+              <li>Poster Design</li>
+              <li>Graphic Design</li>
+              <li>Brand Identity &amp; Logos</li>
+              <li>Print Design</li>
+              <li>Social Media Graphics</li>
+              <li>Art Direction</li>
+            </ul>
+
+            <div class="about__rule" aria-hidden="true"></div>
+
+            <a href="contact.html" class="btn btn--outline reveal">Get in Touch</a>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__inner">
+        <span class="footer__logo">1988 Graphics</span>
+        <nav class="footer__links" aria-label="Footer links">
+          <a href="https://www.instagram.com/1988grfx/"
+             class="footer__link"
+             target="_blank"
+             rel="noopener noreferrer">Instagram</a>
+          <a href="mailto:1988grfx@gmail.com"
+             class="footer__link">Email</a>
+          <a href="https://wa.me/27624897134"
+             class="footer__link"
+             target="_blank"
+             rel="noopener noreferrer">WhatsApp</a>
+        </nav>
+        <p class="footer__copy">&copy; <span id="year"></span> 1988 Graphics</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
