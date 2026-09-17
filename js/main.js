@@ -121,9 +121,30 @@ if ('IntersectionObserver' in window) {
 
 /* =========================================================
    5. Ticker / marquee
+   ─────────────────────────────────────────────────────────
+   The HTML only contains one copy of the phrase set. We
+   clone it here until the strip is comfortably wider than
+   the screen, then duplicate the whole thing once more —
+   that's what makes the CSS's translateX(-50%) loop land on
+   an identical copy with no visible seam or gap, regardless
+   of screen width or how long the phrase set is.
    ========================================================= */
 const ticker = document.getElementById('ticker');
-if (ticker) ticker.classList.add('is-running');
+if (ticker) {
+  const track = ticker.parentElement;
+  const baseHTML = ticker.innerHTML;
+
+  let guard = 0;
+  while (ticker.scrollWidth < track.clientWidth * 2 && guard < 20) {
+    ticker.insertAdjacentHTML('beforeend', baseHTML);
+    guard++;
+  }
+  // Duplicate everything currently in the strip once more so
+  // the halfway point of the animation is an exact repeat.
+  ticker.insertAdjacentHTML('beforeend', ticker.innerHTML);
+
+  ticker.classList.add('is-running');
+}
 
 /* =========================================================
    6. Portfolio rendering
