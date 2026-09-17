@@ -1,0 +1,1560 @@
+/* =========================================================
+   1988 Graphics — Stylesheet
+   Aesthetic: photocopied / punk zine / underground print
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. Tokens
+   --------------------------------------------------------- */
+:root {
+  /* Ink & paper — not pure black/white, mimics print on aged stock */
+  --ink:           #0e0d0b;
+  --ink-deep:      #080807;
+  --paper:         #ede9e0;   /* warm off-white — aged stock */
+  --paper-mid:     #d4cfc4;   /* slightly darker for surfaces */
+  --paper-dark:    #b8b3a8;   /* for muted elements */
+  --ink-mid:       #4a4740;
+  --ink-light:     #7a7670;
+  --ink-dim:       #3a3733;
+
+  /* The only colour accent */
+  --accent:        #d6f000;   /* neon xerox yellow-green */
+  --accent-on:     #0e0d0b;   /* text on accent bg */
+
+  /* Structural */
+  --rule:          rgba(255,255,255,0.07);
+  --rule-paper:    rgba(0,0,0,0.12);
+
+  /* Type */
+  --font-head:     'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+  --font-body:     'Courier New', Courier, monospace;
+  --font-nav:      'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  /* Layout */
+  --nav-h:         3.5rem;
+  --max-w:         1380px;
+  --gutter:        clamp(1.25rem, 4vw, 2.75rem);
+
+  /* Transitions — restrained */
+  --t-fast:        120ms ease;
+  --t-base:        220ms ease;
+}
+
+/* ---------------------------------------------------------
+   2. Reset
+   --------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  /* Intentionally auto — avoids the over-smoothed "digital" look */
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
+main { flex: 1; }
+
+img  { display: block; max-width: 100%; height: auto; }
+a    { color: inherit; text-decoration: none; }
+ul   { list-style: none; }
+
+/* ---------------------------------------------------------
+   3. CSS Texture Layers
+   All texture is CSS-only — no extra images or libraries.
+   --------------------------------------------------------- */
+
+/*
+  GRAIN OVERLAY
+  A pseudo-element added to body creates a full-page
+  photocopy-grain effect using SVG turbulence via a
+  data URI. Subtle — doesn't obscure content.
+*/
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  background-repeat: repeat;
+}
+
+/*
+  HALFTONE ACCENT
+  Used as a decorative element on specific sections.
+  Applied via .has-halftone class on a container.
+*/
+.has-halftone {
+  position: relative;
+}
+.has-halftone::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.045;
+  background-image: radial-gradient(circle, var(--paper) 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+.has-halftone > * { position: relative; z-index: 1; }
+
+/*
+  ROUGH BORDER UTILITY
+  Simulates a slightly uneven stamped/photocopy border.
+  Uses box-shadow layering for a rough-edge feel.
+*/
+.border-rough {
+  box-shadow:
+    inset 0  1px 0 rgba(255,255,255,0.06),
+    inset 0 -1px 0 rgba(255,255,255,0.03),
+    0 0 0 1px rgba(255,255,255,0.07);
+}
+
+/* ---------------------------------------------------------
+   4. Typography
+   --------------------------------------------------------- */
+
+/* Masthead — poster / fanzine cover style */
+.t-masthead {
+  font-family: var(--font-head);
+  font-size: clamp(4rem, 11vw, 11rem);
+  font-weight: 900;
+  line-height: 0.86;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  color: var(--paper);
+}
+
+/* Section heading */
+.t-section-head {
+  font-family: var(--font-head);
+  font-size: clamp(2.25rem, 5.5vw, 5rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--paper);
+}
+
+/* Card / overlay heading */
+.t-card-head {
+  font-family: var(--font-head);
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/*
+  Stamp / typewriter label
+  Mimics rubber-stamp or stencil text on a photocopy.
+*/
+.t-stamp {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+}
+
+/* Body copy */
+.t-body {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: var(--ink-light);
+}
+
+/* ---------------------------------------------------------
+   5. Layout
+   --------------------------------------------------------- */
+.wrap {
+  width: 100%;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* ---------------------------------------------------------
+   6. Horizontal rule — mimics a worn ink line
+   --------------------------------------------------------- */
+.ink-rule {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 0;
+}
+
+.ink-rule--heavy {
+  border-top-width: 2px;
+  border-top-color: rgba(255,255,255,0.1);
+}
+
+/* ---------------------------------------------------------
+   7. Buttons
+   --------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  /* Double border = letterpress/stamp border feel */
+  outline: 1px solid transparent;
+  outline-offset: 3px;
+  border: 2px solid currentColor;
+  padding: 0.9rem 2rem;
+  transition: background-color var(--t-fast), color var(--t-fast), outline-color var(--t-fast);
+  white-space: nowrap;
+  position: relative;
+}
+
+/* Paper / ink fill — primary */
+.btn--ink {
+  background-color: var(--paper);
+  color: var(--ink);
+  border-color: var(--paper);
+}
+.btn--ink:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-on);
+}
+
+/* Outline / ghost */
+.btn--outline {
+  background-color: transparent;
+  color: var(--paper);
+  border-color: var(--paper);
+}
+.btn--outline:hover {
+  background-color: var(--paper);
+  color: var(--ink);
+}
+
+/* Large contact CTA buttons */
+.btn--contact {
+  width: 100%;
+  padding: 1.4rem 2rem;
+  font-size: 1rem;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+/* WhatsApp specific hover */
+.btn--whatsapp:hover {
+  background-color: #22c35e;
+  border-color: #22c35e;
+  color: #fff;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.btn__icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* ---------------------------------------------------------
+   8. Navigation
+   --------------------------------------------------------- */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 300;
+  height: var(--nav-h);
+  background-color: var(--ink-deep);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.nav__logo {
+  font-family: var(--font-head);
+  font-size: 0.88rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--paper);
+  flex-shrink: 0;
+  transition: color var(--t-fast);
+}
+.nav__logo:hover { color: var(--accent); }
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav__link {
+  font-family: var(--font-nav);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  transition: color var(--t-fast);
+  position: relative;
+  padding-bottom: 2px;
+}
+
+/* Underline that draws like ink */
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--paper);
+  transition: width var(--t-base);
+}
+
+.nav__link:hover,
+.nav__link.active         { color: var(--paper); }
+.nav__link:hover::after,
+.nav__link.active::after  { width: 100%; }
+
+/* Hamburger */
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 2rem;
+  height: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav__toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--paper);
+  transform-origin: center;
+  transition: transform var(--t-base), opacity var(--t-base);
+}
+
+.nav__toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav__toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav__toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ---------------------------------------------------------
+   9. Page offset (fixed nav)
+   --------------------------------------------------------- */
+main > *:first-child { padding-top: var(--nav-h); }
+
+/* ---------------------------------------------------------
+   10. HOME HERO
+   --------------------------------------------------------- */
+.hero {
+  position: relative;
+  padding-block: var(--nav-h) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.hero__top {
+  padding-block: 3.5rem 3rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero__title-col {
+  flex: 1 1 auto;
+}
+
+.hero__meta-col {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.5rem;
+  padding-bottom: 0.5rem;
+  /* Subtle rotation — like a hand-stamped annotation */
+  transform: rotate(0.4deg);
+}
+
+.hero__kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.75rem;
+}
+
+.hero__kicker-rule {
+  display: block;
+  width: 1.75rem;
+  height: 1px;
+  background-color: var(--ink-light);
+  flex-shrink: 0;
+}
+
+.hero__title { color: var(--paper); }
+
+/* Vertical discipline text — like a print registration mark */
+.hero__discipline {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+/* Rough bracket — like a photocopy crop mark */
+.hero__bracket {
+  font-family: var(--font-head);
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(255,255,255,0.06);
+  user-select: none;
+  letter-spacing: -0.1em;
+}
+
+/* Ticker / marquee strip */
+.hero__ticker {
+  border-top: 1px solid var(--rule);
+  overflow: hidden;
+  white-space: nowrap;
+  padding-block: 0.7rem;
+}
+
+.hero__ticker-inner {
+  display: inline-flex;
+}
+
+.hero__ticker-inner.is-running {
+  animation: ticker 40s linear infinite;
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.hero__ticker-item {
+  font-family: var(--font-head);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  padding-inline: 2rem;
+  user-select: none;
+}
+
+.hero__ticker-item strong {
+  color: var(--accent);
+  font-weight: 900;
+}
+
+/* ---------------------------------------------------------
+   11. PORTFOLIO — Filter tabs
+   --------------------------------------------------------- */
+.pf-filters {
+  padding-block: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.pf-filters__inner {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.pf-filter {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1.1rem;
+  border-right: 1px solid var(--rule);
+  transition: color var(--t-fast);
+  white-space: nowrap;
+}
+
+.pf-filter:first-child { padding-left: 0; }
+.pf-filter:last-child  { border-right: none; }
+
+.pf-filter:hover        { color: var(--paper); }
+.pf-filter.is-active    { color: var(--paper); }
+
+/* Active indicator — a small accent dot above the label */
+.pf-filter.is-active::before {
+  content: '▪';
+  display: inline-block;
+  color: var(--accent);
+  margin-right: 0.4em;
+  font-size: 0.5rem;
+  vertical-align: middle;
+}
+
+/* ---------------------------------------------------------
+   11b. PORTFOLIO GRID
+   ─────────────────────────────────────────────────────────
+   Images flow at their NATURAL proportions.
+   No fixed aspect-ratio on the container — the image
+   height drives the cell height.
+   Posters stay tall, landscapes stay wide.
+
+   The grid uses CSS columns (masonry-like) for the
+   main portfolio page, and a 12-col CSS grid on the
+   homepage for the curated selection.
+   --------------------------------------------------------- */
+
+/* ── Masonry columns layout (portfolio.html) ── */
+.pf-masonry {
+  column-count: 3;
+  column-gap: 3px;
+  background-color: var(--ink);
+  padding: 3px;
+}
+
+.pf-masonry .pf-item {
+  break-inside: avoid;
+  margin-bottom: 3px;
+  display: block;
+}
+
+/* ── 12-col grid layout (index.html — curated selection) ── */
+.pf-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3px;
+  background-color: var(--ink);
+  padding: 3px;
+}
+
+.pf-grid .pf-item[data-size="sm"] { grid-column: span 3; }
+.pf-grid .pf-item[data-size="md"] { grid-column: span 4; }
+.pf-grid .pf-item[data-size="lg"] { grid-column: span 6; }
+.pf-grid .pf-item[data-size="xl"] { grid-column: span 12; }
+
+/* ── Shared pf-item styles ── */
+.pf-item {
+  position: relative;
+  overflow: hidden;
+  background-color: #0e0d0b;
+  cursor: pointer;
+}
+
+.pf-item:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+  z-index: 2;
+}
+
+/* The image fills its container at natural aspect ratio */
+.pf-item__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: contrast(1.06) brightness(0.97);
+  transition: transform 500ms ease, filter 500ms ease;
+}
+
+.pf-item:hover .pf-item__img {
+  transform: scale(1.022);
+  filter: contrast(1.1) brightness(1.0);
+}
+
+/* Hover overlay — gradient from bottom */
+.pf-item__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(8,8,6,0.9)  0%,
+    rgba(8,8,6,0.25) 45%,
+    transparent      70%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem 1.4rem 1.4rem;
+  opacity: 0;
+  transition: opacity var(--t-base);
+}
+
+.pf-item:hover .pf-item__overlay { opacity: 1; }
+
+.pf-item__title {
+  font-family: var(--font-head);
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--paper);
+  margin-bottom: 0.25rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+}
+
+.pf-item__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pf-item__cat {
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.pf-item__year {
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  color: var(--ink-light);
+}
+
+/* Placeholder tiles */
+.pf-placeholder {
+  width: 100%;
+  /* Fixed height for placeholder — replaced by real image height when live */
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f0e0c;
+  background-image: radial-gradient(circle, #1c1b18 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+.pf-placeholder__label {
+  font-family: var(--font-body);
+  font-size: 0.56rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #252320;
+  text-align: center;
+  padding-inline: 1rem;
+  line-height: 2;
+}
+
+/* ---------------------------------------------------------
+   12. PROJECT VIEWER
+   Full-page overlay that replaces the old modal lightbox.
+   Clean, artwork-first. Minimal chrome.
+   --------------------------------------------------------- */
+.pv {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  background-color: var(--ink-deep);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  display: none;
+  flex-direction: column;
+}
+
+.pv.is-open { display: flex; }
+
+/* Top bar */
+.pv__bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--ink-deep);
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--gutter);
+  height: var(--nav-h);
+  flex-shrink: 0;
+}
+
+.pv__back {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-head);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 0;
+  transition: color var(--t-fast);
+}
+.pv__back:hover { color: var(--paper); }
+
+.pv__back-arrow {
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform var(--t-fast);
+}
+.pv__back:hover .pv__back-arrow { transform: translateX(-3px); }
+
+.pv__nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.pv__nav-btn {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 0;
+  transition: color var(--t-fast);
+}
+.pv__nav-btn:hover    { color: var(--paper); }
+.pv__nav-btn:disabled { opacity: 0.18; cursor: default; }
+
+.pv__counter {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-light);
+}
+
+/* Content area */
+.pv__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Primary image — constrained to fit the visible screen without scrolling */
+.pv__main-img-wrap {
+  width: 100%;
+  background-color: var(--ink-deep);
+  line-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem var(--gutter) 0;
+}
+
+.pv__main-img {
+  /* Never taller than the viewport minus the nav bar and a bottom margin.
+     Never wider than the viewport. Centres itself. Always fully visible. */
+  max-height: calc(100vh - var(--nav-h) - 6rem);
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: contrast(1.04);
+  cursor: zoom-in;
+  transition: filter var(--t-fast);
+}
+
+.pv__main-img:hover { filter: contrast(1.07); }
+
+/* Project info strip */
+.pv__info {
+  padding: 2.5rem var(--gutter) 3rem;
+  border-top: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem clamp(3rem, 6vw, 7rem);
+  align-items: start;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  width: 100%;
+}
+
+.pv__info-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.pv__info-title {
+  font-family: var(--font-head);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--paper);
+  line-height: 0.95;
+  margin-bottom: 0.75rem;
+}
+
+.pv__info-cat {
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.pv__info-year {
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+}
+
+.pv__info-desc {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: var(--ink-light);
+  max-width: 52ch;
+}
+
+/* Additional images strip */
+.pv__extra-imgs {
+  padding: 0 3px 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  width: 100%;
+}
+
+.pv__extra-img-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 0 var(--gutter);
+  line-height: 0;
+  cursor: zoom-in;
+}
+
+.pv__extra-img {
+  max-height: calc(100vh - var(--nav-h) - 6rem);
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  filter: contrast(1.04);
+  transition: filter var(--t-fast);
+}
+
+.pv__extra-img:hover { filter: contrast(1.08); }
+
+/* Contact prompt at bottom of project */
+.pv__contact-strip {
+  padding: 2.5rem var(--gutter);
+  border-top: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  width: 100%;
+}
+
+.pv__contact-text {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--ink-light);
+  letter-spacing: 0.04em;
+}
+
+/* ---------------------------------------------------------
+   12b. IMAGE ZOOM (full-screen single image)
+   --------------------------------------------------------- */
+.img-zoom {
+  position: fixed;
+  inset: 0;
+  z-index: 600;
+  background-color: rgba(4,4,3,0.96);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  padding: 3.5rem;  /* breathing room — image never touches screen edges */
+}
+
+.img-zoom.is-open { display: flex; }
+
+.img-zoom__img {
+  /* Fits entirely on screen without scrolling.
+     max-width: never wider than 88% of viewport.
+     max-height: leaves ~15% margin above and below.
+     1100px hard cap prevents oversized display on large monitors. */
+  max-width:  min(88vw, 1100px);
+  max-height: 84vh;
+  width:  auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: contrast(1.04);
+  cursor: zoom-out;
+}
+
+.img-zoom__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--ink-light);
+  font-family: var(--font-head);
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
+  transition: color var(--t-fast), border-color var(--t-fast);
+}
+.img-zoom__close:hover { color: var(--paper); border-color: var(--paper); }
+
+/* ---------------------------------------------------------
+   13. PAGE HEADING (portfolio.html)
+   --------------------------------------------------------- */
+.page-hed {
+  padding-block: 3.5rem 2.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.page-hed__inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.page-hed__sub {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--ink-light);
+  letter-spacing: 0.08em;
+  line-height: 1.7;
+  max-width: 38ch;
+  text-align: right;
+}
+
+/* ---------------------------------------------------------
+   14. ABOUT
+   --------------------------------------------------------- */
+.about-section {
+  padding-block: 5rem 6rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: clamp(3rem, 6vw, 8rem);
+  align-items: start;
+}
+
+/* Photo column */
+.about__photo-wrap {
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+}
+
+.about__photo-box {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-color: #111;
+  overflow: hidden;
+  position: relative;
+  /* Double border like a photocopied frame */
+  outline: 1px solid rgba(255,255,255,0.05);
+  outline-offset: 5px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/*
+  Scan line overlay on the photo placeholder.
+  Mimics a xerox scan line artifact.
+*/
+.about__photo-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 3px,
+    rgba(0,0,0,0.04) 3px,
+    rgba(0,0,0,0.04) 4px
+  );
+}
+
+/*
+  Registration / crop mark corners — like a print paste-up
+*/
+.about__photo-box::after {
+  content: '';
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  right: 0.9rem;
+  bottom: 0.9rem;
+  z-index: 3;
+  pointer-events: none;
+  /* Four corner marks via box-shadow */
+  box-shadow:
+    /* top-left */
+    -1px  0 0 rgba(255,255,255,0.15),
+     0   -1px 0 rgba(255,255,255,0.15),
+    /* top-right */
+    calc(100% - -1px) 0 0 rgba(255,255,255,0.15),
+    100% -1px 0 rgba(255,255,255,0.15);
+}
+
+.about__photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0e0d0b;
+  background-image:
+    radial-gradient(circle, #1c1b18 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+
+.about__photo-placeholder p {
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #242320;
+  text-align: center;
+  padding: 1rem;
+  line-height: 2;
+}
+
+.about__photo-caption {
+  margin-top: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #2e2c28;
+}
+
+/* Text column */
+.about__rule {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255,255,255,0.06);
+  margin-block: 2.75rem;
+}
+
+.about__intro-head {
+  color: var(--paper);
+  margin-bottom: 2rem;
+}
+
+.about__body {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: var(--ink-light);
+  margin-bottom: 1.25rem;
+  max-width: 56ch;
+}
+
+.about__stamp {
+  margin-bottom: 1.25rem;
+}
+
+/* Services list */
+.services-list {
+  margin-bottom: 2.75rem;
+}
+
+.services-list li {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--ink-light);
+  padding-block: 0.65rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: color var(--t-fast);
+}
+
+.services-list li:hover { color: var(--paper); }
+
+/* Em-dash bullet — typewriter style */
+.services-list li::before {
+  content: '—';
+  color: rgba(255,255,255,0.12);
+  flex-shrink: 0;
+  font-size: 0.75rem;
+}
+
+/* ---------------------------------------------------------
+   15. CONTACT PAGE
+   --------------------------------------------------------- */
+.contact-section {
+  padding-block: 5rem 6rem;
+}
+
+/* Single-column layout — no need for a sidebar on a direct-action page */
+.contact-page {
+  max-width: 680px;
+}
+
+.contact__head {
+  margin-bottom: 3.5rem;
+}
+
+.contact__head-title {
+  color: var(--paper);
+  margin-top: 1rem;
+}
+
+/*
+  PRIMARY CONTACT BUTTONS
+  Large, easy to tap on mobile. Each row has:
+    — a bold verb label (EMAIL / WHATSAPP)
+    — a short supporting line below it
+*/
+.contact__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 3.5rem;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  background-color: transparent;
+  color: var(--paper);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--t-fast), border-color var(--t-fast);
+  /* No border-radius — print aesthetic */
+}
+
+.contact-btn:hover {
+  background-color: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.22);
+}
+
+.contact-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Solid fill for primary email button */
+.contact-btn--primary {
+  background-color: var(--paper);
+  color: var(--ink);
+  border-color: var(--paper);
+}
+
+.contact-btn--primary:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-on);
+}
+
+/* WhatsApp hover */
+.contact-btn--whatsapp:hover {
+  background-color: rgba(34, 195, 94, 0.08);
+  border-color: #22c35e;
+}
+
+.contact-btn__icon {
+  width: 1.35rem;
+  height: 1.35rem;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.contact-btn--primary .contact-btn__icon { opacity: 1; }
+
+.contact-btn__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.contact-btn__label {
+  font-family: var(--font-head);
+  font-size: 0.95rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.contact-btn__sub {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  opacity: 0.55;
+}
+
+/* Instagram — tertiary, less prominent */
+.contact__instagram {
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.contact__ig-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  transition: color var(--t-fast);
+  padding-bottom: 1px;
+  border-bottom: 1px solid transparent;
+}
+
+.contact__ig-link:hover {
+  color: var(--paper);
+  border-bottom-color: rgba(255,255,255,0.2);
+}
+
+/* Availability indicator */
+.contact__avail {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(255,255,255,0.07);
+  background-image: radial-gradient(circle, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 8px 8px;
+  margin-top: 3rem;
+}
+
+.contact__avail-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  flex-shrink: 0;
+  animation: blink 3s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.15; }
+}
+
+.contact__avail-text {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--ink-light);
+  letter-spacing: 0.06em;
+}
+
+/* ---------------------------------------------------------
+   15b. CONTACT STRIP
+   Appears at the bottom of the homepage and portfolio page.
+   Deliberately not a full "section" — just a clear prompt
+   that sits above the footer.
+   --------------------------------------------------------- */
+.contact-strip {
+  border-top: 1px solid var(--rule);
+  padding-block: 4rem;
+}
+
+.contact-strip__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-strip__heading {
+  font-family: var(--font-head);
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--paper);
+  line-height: 0.95;
+}
+
+.contact-strip__buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+/* Strip-specific button variant — smaller than the full page buttons */
+.contact-strip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 1.5rem;
+  font-family: var(--font-head);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--paper);
+  background: transparent;
+  transition: background-color var(--t-fast), border-color var(--t-fast), color var(--t-fast);
+  white-space: nowrap;
+}
+
+.contact-strip-btn:hover {
+  background-color: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.3);
+}
+
+.contact-strip-btn--primary {
+  background-color: var(--paper);
+  color: var(--ink);
+  border-color: var(--paper);
+}
+
+.contact-strip-btn--primary:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-on);
+}
+
+.contact-strip-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.contact-strip-btn__icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+/* ---------------------------------------------------------
+   16. FOOTER
+   --------------------------------------------------------- */
+.site-footer {
+  border-top: 1px solid var(--rule);
+  padding-block: 2rem;
+  /* Subtle halftone strip */
+  background-image: radial-gradient(circle, rgba(255,255,255,0.018) 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer__logo {
+  font-family: var(--font-head);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.footer__link {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  transition: color var(--t-fast);
+  border-bottom: 1px solid transparent;
+}
+.footer__link:hover {
+  color: var(--paper);
+  border-bottom-color: rgba(255,255,255,0.2);
+}
+
+.footer__copy {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.15);
+  letter-spacing: 0.08em;
+  text-align: right;
+}
+
+/* ---------------------------------------------------------
+   17. Reveal on scroll
+   --------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+.reveal.revealed { opacity: 1; transform: none; }
+.reveal[data-delay="1"] { transition-delay: 55ms; }
+.reveal[data-delay="2"] { transition-delay: 110ms; }
+.reveal[data-delay="3"] { transition-delay: 165ms; }
+
+/* ---------------------------------------------------------
+   18. Responsive — Tablet ≤ 960px
+   --------------------------------------------------------- */
+@media (max-width: 960px) {
+  /* Grid: collapse xl stays full, lg takes full, others half */
+  .pf-grid .pf-item[data-size="sm"] { grid-column: span 6; }
+  .pf-grid .pf-item[data-size="md"] { grid-column: span 6; }
+  .pf-grid .pf-item[data-size="lg"] { grid-column: span 12; }
+  .pf-grid .pf-item[data-size="xl"] { grid-column: span 12; }
+
+  /* Masonry: 2 columns */
+  .pf-masonry { column-count: 2; }
+
+  .about-grid     { grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .hero__meta-col { display: none; }
+
+  /* Project viewer info: single column */
+  .pv__info { grid-template-columns: 1fr; gap: 1.5rem; }
+
+  /* Contact strip: stack on tablet */
+  .contact-strip__inner { flex-direction: column; align-items: flex-start; }
+}
+
+/* ---------------------------------------------------------
+   19. Responsive — Mobile ≤ 640px
+   --------------------------------------------------------- */
+@media (max-width: 640px) {
+  :root { --nav-h: 3rem; }
+
+  /* Nav */
+  .nav__toggle { display: flex; }
+  .nav__links {
+    display: none;
+    position: fixed;
+    inset: var(--nav-h) 0 0 0;
+    background-color: var(--ink-deep);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    z-index: 290;
+  }
+  .nav__links.is-open { display: flex; }
+  .nav__link { font-size: 1.1rem; letter-spacing: 0.12em; }
+
+  /* Grid: single column */
+  .pf-grid { grid-template-columns: 1fr; padding: 2px; gap: 2px; }
+  .pf-grid .pf-item[data-size="sm"],
+  .pf-grid .pf-item[data-size="md"],
+  .pf-grid .pf-item[data-size="lg"],
+  .pf-grid .pf-item[data-size="xl"] { grid-column: span 1; }
+
+  /* Masonry: 1 column on small mobile */
+  .pf-masonry { column-count: 1; }
+
+  /* Filter tabs scroll */
+  .pf-filters__inner { flex-wrap: nowrap; overflow-x: auto; }
+
+  /* Hero */
+  .hero__top      { flex-direction: column; gap: 0; }
+  .hero__meta-col { display: none; }
+
+  /* About */
+  .about-grid        { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about__photo-wrap { position: static; }
+  .about__photo-box  { max-width: 200px; }
+
+  /* Contact page */
+  .contact-btn        { padding: 1.35rem 1.25rem; }
+  .contact-btn__label { font-size: 0.88rem; }
+
+  /* Contact strip */
+  .contact-strip          { padding-block: 3rem; }
+  .contact-strip__inner   { flex-direction: column; align-items: flex-start; }
+  .contact-strip__buttons { width: 100%; flex-direction: column; }
+  .contact-strip-btn      { width: 100%; justify-content: center; }
+
+  /* Page hed */
+  .page-hed__inner { flex-direction: column; align-items: flex-start; }
+  .page-hed__sub   { text-align: left; }
+
+  /* Footer */
+  .footer__inner { flex-direction: column; align-items: flex-start; }
+  .footer__copy  { text-align: left; }
+
+  /* Project viewer */
+  .pv__contact-strip { flex-direction: column; align-items: flex-start; }
+}
