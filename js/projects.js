@@ -50,12 +50,68 @@ const PROJECTS = [
   },
 
   {
+    id:       'heart-grenade-poster',
+    title:    'Heart Grenade',
+    category: 'Posters',
+    desc:     '',
+    thumb:    'assets/work/Heart-Grenade-Poster.jpg',
+    images:   ['assets/work/Heart-Grenade-Poster.jpg'],
+    size:     'sm'
+  },
+
+  {
     id:       'mental-health-poster',
     title:    'Mental Health',
     category: 'Posters',
     desc:     '',
     thumb:    'assets/work/Mental-Health-Poster.jpg',
     images:   ['assets/work/Mental-Health-Poster.jpg'],
+    size:     'sm'
+  },
+
+  {
+    id:       'malcolm-in-the-middle-punk-poster',
+    title:    'Malcolm in the Middle',
+    category: 'Posters',
+    desc:     '',
+    thumb:    'assets/work/Malcolm-In-The-Middle-Punk-Poster.jpg',
+    images:   [
+      'assets/work/Malcolm-In-The-Middle-Punk-Poster.jpg',
+      'assets/work/Malcolm-In-The-Middle-Punk-Poster-Red.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'nailed-hands',
+    title:    'Nailed Hands',
+    category: 'Posters',
+    desc:     '',
+    thumb:    'assets/work/Nailed-Hands.jpg',
+    images:   ['assets/work/Nailed-Hands.jpg'],
+    size:     'sm'
+  },
+
+  {
+    id:       'heart-ache-poster',
+    title:    'Heart Ache',
+    category: 'Posters',
+    desc:     '',
+    thumb:    'assets/work/Heart-Ache-Poster.jpg',
+    images:   [
+      'assets/work/Heart-Ache-Poster.jpg',
+      'assets/work/Heart-Ache-Poster-Inverted.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'tinnitus-awareness-poster',
+    title:    'Tinnitus Awareness',
+    category: 'Posters',
+    desc:     '',
+    thumb:    'assets/work/Tinnitus-Awareness-Poster.jpg',
+    images:   ['assets/work/Tinnitus-Awareness-Poster.jpg'],
     size:     'sm'
   },
 
@@ -93,58 +149,12 @@ const PROJECTS = [
   },
 
   {
-    id:       'heart-ache-poster',
-    title:    'Heart Ache',
-    category: 'Posters',
-    desc:     '',
-    thumb:    'assets/work/Heart-Ache-Poster.jpg',
-    images:   [
-      'assets/work/Heart-Ache-Poster.jpg',
-      'assets/work/Heart-Ache-Poster-Inverted.jpg'
-    ],
-    size:     'sm'
-  },
-
-  {
-    id:       'heart-grenade-poster',
-    title:    'Heart Grenade',
-    category: 'Posters',
-    desc:     '',
-    thumb:    'assets/work/Heart-Grenade-Poster.jpg',
-    images:   ['assets/work/Heart-Grenade-Poster.jpg'],
-    size:     'sm'
-  },
-
-  {
     id:       'japanese-drifting-poster',
     title:    'Japanese Drifting',
     category: 'Posters',
     desc:     '',
     thumb:    'assets/work/Japanese-Drifting-Poster.jpg',
     images:   ['assets/work/Japanese-Drifting-Poster.jpg'],
-    size:     'sm'
-  },
-
-  {
-    id:       'malcolm-in-the-middle-punk-poster',
-    title:    'Malcolm in the Middle',
-    category: 'Posters',
-    desc:     '',
-    thumb:    'assets/work/Malcolm-In-The-Middle-Punk-Poster.jpg',
-    images:   [
-      'assets/work/Malcolm-In-The-Middle-Punk-Poster.jpg',
-      'assets/work/Malcolm-In-The-Middle-Punk-Poster-Red.jpg'
-    ],
-    size:     'sm'
-  },
-
-  {
-    id:       'nailed-hands',
-    title:    'Nailed Hands',
-    category: 'Posters',
-    desc:     '',
-    thumb:    'assets/work/Nailed-Hands.jpg',
-    images:   ['assets/work/Nailed-Hands.jpg'],
     size:     'sm'
   },
 
@@ -185,16 +195,6 @@ const PROJECTS = [
     desc:     '',
     thumb:    'assets/work/Social-Media-Slaves-Poster.jpg',
     images:   ['assets/work/Social-Media-Slaves-Poster.jpg'],
-    size:     'sm'
-  },
-
-  {
-    id:       'tinnitus-awareness-poster',
-    title:    'Tinnitus Awareness',
-    category: 'Posters',
-    desc:     '',
-    thumb:    'assets/work/Tinnitus-Awareness-Poster.jpg',
-    images:   ['assets/work/Tinnitus-Awareness-Poster.jpg'],
     size:     'sm'
   },
 
