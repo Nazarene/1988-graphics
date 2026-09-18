@@ -53,6 +53,9 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  /* Always reserve scrollbar space so the fixed header doesn't
+     shift a few pixels between pages that do/don't need to scroll */
+  overflow-y: scroll;
 }
 
 body {
