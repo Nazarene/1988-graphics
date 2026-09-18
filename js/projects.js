@@ -30,16 +30,6 @@
 const PROJECTS = [
 
   {
-    id:       'bmx-poster',
-    title:    'BMX',
-    category: 'Posters',
-    desc:     '',
-    thumb:    'assets/work/BMX-Poster.jpg',
-    images:   ['assets/work/BMX-Poster.jpg'],
-    size:     'sm'
-  },
-
-  {
     id:       'burning-eyes-poster',
     title:    'Burning Eyes',
     category: 'Posters',
@@ -47,7 +37,7 @@ const PROJECTS = [
     thumb:    'assets/work/Burning-Eyes-Poster.jpg',
     images:   ['assets/work/Burning-Eyes-Poster.jpg'],
     size:     'sm'
-  },
+  },  
 
   {
     id:       'dont-skip-the-dentist-poster',
@@ -56,6 +46,39 @@ const PROJECTS = [
     desc:     '',
     thumb:    'assets/work/Dont-Skip-The-Dentist-Poster.jpg',
     images:   ['assets/work/Dont-Skip-The-Dentist-Poster.jpg'],
+    size:     'sm'
+  },
+
+  {
+    id:       'mental-health-poster',
+    title:    'Mental Health',
+    category: 'Posters',
+    desc:     '',
+    thumb:    'assets/work/Mental-Health-Poster.jpg',
+    images:   ['assets/work/Mental-Health-Poster.jpg'],
+    size:     'sm'
+  },
+
+  {
+    id:       'roomys-kind-poster',
+    title:    "Roomy's Kind",
+    category: 'Posters',
+    desc:     '',
+    thumb:    'assets/work/Roomys-Kind-Poster.jpg',
+    images:   [
+      'assets/work/Roomys-Kind-Poster.jpg',
+      'assets/work/Roomys-Kind-Poster-Blue.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'bmx-poster',
+    title:    'BMX',
+    category: 'Posters',
+    desc:     '',
+    thumb:    'assets/work/BMX-Poster.jpg',
+    images:   ['assets/work/BMX-Poster.jpg'],
     size:     'sm'
   },
 
@@ -116,16 +139,6 @@ const PROJECTS = [
   },
 
   {
-    id:       'mental-health-poster',
-    title:    'Mental Health',
-    category: 'Posters',
-    desc:     '',
-    thumb:    'assets/work/Mental-Health-Poster.jpg',
-    images:   ['assets/work/Mental-Health-Poster.jpg'],
-    size:     'sm'
-  },
-
-  {
     id:       'nailed-hands',
     title:    'Nailed Hands',
     category: 'Posters',
@@ -152,19 +165,6 @@ const PROJECTS = [
     desc:     '',
     thumb:    'assets/work/Rodney-Mullen-Skate-Poster.jpg',
     images:   ['assets/work/Rodney-Mullen-Skate-Poster.jpg'],
-    size:     'sm'
-  },
-
-  {
-    id:       'roomys-kind-poster',
-    title:    "Roomy's Kind",
-    category: 'Posters',
-    desc:     '',
-    thumb:    'assets/work/Roomys-Kind-Poster.jpg',
-    images:   [
-      'assets/work/Roomys-Kind-Poster.jpg',
-      'assets/work/Roomys-Kind-Poster-Blue.jpg'
-    ],
     size:     'sm'
   },
 
