@@ -31,7 +31,7 @@
   --font-nav:      'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   /* Layout */
-  --nav-h:         3.5rem;
+  --nav-h:         6rem;
   --max-w:         1380px;
   --gutter:        clamp(1.25rem, 4vw, 2.75rem);
 
@@ -315,7 +315,7 @@ body::before {
   align-items: center;
   gap: 0.6rem;
   font-family: var(--font-head);
-  font-size: 0.88rem;
+  font-size: 1.3rem;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -326,7 +326,7 @@ body::before {
 .nav__logo:hover { color: var(--accent); }
 
 .nav__logo-mark {
-  height: 1.15rem;
+  height: 1em;
   width: auto;
   display: block;
   flex-shrink: 0;
@@ -346,12 +346,21 @@ body::before {
   text-transform: uppercase;
   color: var(--ink-light);
   transition: color var(--t-fast);
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.7rem;
+  --nav-icon-size: 4.75rem;
+}
+
+.nav__link-label {
   position: relative;
   padding-bottom: 2px;
 }
 
-/* Underline that draws like ink */
-.nav__link::after {
+/* Underline that draws like ink — lives under the text only,
+   never under the icon */
+.nav__link-label::after {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -363,9 +372,32 @@ body::before {
 }
 
 .nav__link:hover,
-.nav__link.active         { color: var(--paper); }
-.nav__link:hover::after,
-.nav__link.active::after  { width: 100%; }
+.nav__link.active                        { color: var(--paper); }
+.nav__link:hover .nav__link-label::after,
+.nav__link.active .nav__link-label::after { width: 100%; }
+
+.nav__link-icon {
+  width: var(--nav-icon-size);
+  height: var(--nav-icon-size);
+  display: block;
+  opacity: 0.55;
+  transform-origin: center;
+  transition: opacity var(--t-fast), transform 0.3s ease;
+}
+
+.nav__link:hover .nav__link-icon,
+.nav__link.active .nav__link-icon { opacity: 1; }
+
+.nav__link:hover .nav__link-icon {
+  animation: nav-icon-wiggle 0.45s ease forwards;
+}
+
+@keyframes nav-icon-wiggle {
+  0%   { transform: scale(1.15) rotate(0deg); }
+  25%  { transform: scale(1.15) rotate(-8deg); }
+  60%  { transform: scale(1.15) rotate(6deg); }
+  100% { transform: scale(1.15) rotate(0deg); }
+}
 
 /* Hamburger */
 .nav__toggle {
@@ -485,7 +517,7 @@ main > *:first-child { padding-top: var(--nav-h); }
 }
 
 .hero__ticker-inner.is-running {
-  animation: ticker 60s linear infinite;
+  animation: ticker 40s linear infinite;
 }
 
 @keyframes ticker {
@@ -1524,6 +1556,9 @@ main > *:first-child { padding-top: var(--nav-h); }
 
   /* Nav */
   .nav__toggle { display: flex; }
+  .nav__link-icon { top: 50%; transform: translateY(-50%); transform-origin: center; }
+  .nav__link { --nav-icon-size: 2.25rem; }
+  .nav__link:hover .nav__link-icon { animation: none; transform: translateY(-50%) scale(1.15); }
   .nav__links {
     display: none;
     position: fixed;
