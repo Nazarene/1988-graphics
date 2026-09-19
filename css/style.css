@@ -1541,20 +1541,10 @@ main > *:first-child { padding-top: var(--nav-h); }
   .about-grid     { grid-template-columns: 1fr 1fr; gap: 3rem; }
   .hero__meta-col { display: none; }
 
-  /* Project viewer info: single column */
-  .pv__info { grid-template-columns: 1fr; gap: 1.5rem; }
-
-  /* Contact strip: stack on tablet */
-  .contact-strip__inner { flex-direction: column; align-items: flex-start; }
-}
-
-/* ---------------------------------------------------------
-   19. Responsive — Mobile ≤ 640px
-   --------------------------------------------------------- */
-@media (max-width: 640px) {
-  :root { --nav-h: 3rem; }
-
-  /* Nav */
+  /* Nav — switch to the hamburger/stacked menu earlier than the
+     640px text breakpoint, since the icon+text nav row needs more
+     horizontal room than a narrow tablet width can give it. This
+     avoids ever showing the full desktop row too cramped. */
   .nav__toggle { display: flex; }
   .nav__link-icon { top: 50%; transform: translateY(-50%); transform-origin: center; }
   .nav__link { --nav-icon-size: 2.25rem; }
@@ -1572,6 +1562,19 @@ main > *:first-child { padding-top: var(--nav-h); }
   }
   .nav__links.is-open { display: flex; }
   .nav__link { font-size: 1.1rem; letter-spacing: 0.12em; }
+
+  /* Project viewer info: single column */
+  .pv__info { grid-template-columns: 1fr; gap: 1.5rem; }
+
+  /* Contact strip: stack on tablet */
+  .contact-strip__inner { flex-direction: column; align-items: flex-start; }
+}
+
+/* ---------------------------------------------------------
+   19. Responsive — Mobile ≤ 640px
+   --------------------------------------------------------- */
+@media (max-width: 640px) {
+  :root { --nav-h: 3rem; }
 
   /* Grid: single column */
   .pf-grid { grid-template-columns: 1fr; padding: 2px; gap: 2px; }
