@@ -517,7 +517,7 @@ main > *:first-child { padding-top: var(--nav-h); }
 }
 
 .hero__ticker-inner.is-running {
-  animation: ticker 40s linear infinite;
+  animation: ticker 60s linear infinite;
 }
 
 @keyframes ticker {
@@ -1546,9 +1546,7 @@ main > *:first-child { padding-top: var(--nav-h); }
      horizontal room than a narrow tablet width can give it. This
      avoids ever showing the full desktop row too cramped. */
   .nav__toggle { display: flex; }
-  .nav__link-icon { top: 50%; transform: translateY(-50%); transform-origin: center; }
-  .nav__link { --nav-icon-size: 2.25rem; }
-  .nav__link:hover .nav__link-icon { animation: none; transform: translateY(-50%) scale(1.15); }
+  .nav__link { --nav-icon-size: 3rem; }
   .nav__links {
     display: none;
     position: fixed;
@@ -1561,7 +1559,14 @@ main > *:first-child { padding-top: var(--nav-h); }
     z-index: 290;
   }
   .nav__links.is-open { display: flex; }
-  .nav__link { font-size: 1.1rem; letter-spacing: 0.12em; }
+  .nav__link {
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.6rem;
+  }
 
   /* Project viewer info: single column */
   .pv__info { grid-template-columns: 1fr; gap: 1.5rem; }
