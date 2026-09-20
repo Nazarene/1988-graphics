@@ -1595,7 +1595,7 @@ main > *:first-child { padding-top: var(--nav-h); }
   .pf-filters__inner { flex-wrap: nowrap; overflow-x: auto; }
 
   /* Hero */
-  .hero__top      { flex-direction: column; gap: 0; }
+  .hero__top      { flex-direction: column; gap: 0; align-items: center; text-align: center; }
   .hero__meta-col { display: none; }
 
   /* About */
