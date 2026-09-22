@@ -217,7 +217,7 @@ const PROJECTS = [
   {
     id:       'ascii-flowers',
     title:    'ASCII Flowers',
-    category: 'Poster',
+    category: 'Posters',
     desc:     '',
     thumb:    'assets/work/ASCII Flowers-Posters.jpg',
     images:   ['assets/work/ASCII Flowers-Posters.jpg'],
@@ -227,7 +227,7 @@ const PROJECTS = [
   {
     id:       'abortion-is-murder',
     title:    'Abortion Is Murder',
-    category: 'Poster',
+    category: 'Posters',
     desc:     '',
     thumb:    'assets/work/Abortion Is Murder-Posters.jpg',
     images:   ['assets/work/Abortion Is Murder-Posters.jpg'],
@@ -469,7 +469,7 @@ const PROJECTS = [
   {
     id:       'straight-edge',
     title:    'Straight Edge',
-    category: 'Poster',
+    category: 'Posters',
     desc:     '',
     thumb:    'assets/work/Straight Edge-Posters.jpg',
     images:   [
