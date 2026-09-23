@@ -518,8 +518,8 @@ const PROJECTS = [
     title:    'Sober Minder Fingerboard Graphic',
     category: 'Graphic Design',
     desc:     '',
-    thumb:    'assets/work/Sober Minder Fingerboard Graphic-Graphic Design.png',
-    images:   ['assets/work/Sober Minder Fingerboard Graphic-Graphic Design.png'],
+    thumb:    'assets/work/Sober-Minder-Fingerboard-Graphic-Graphic-Design.jpg',
+    images:   ['assets/work/Sober-Minder-Fingerboard-Graphic-Graphic-Design.jpg'],
     size:     'md'
   }
 
