@@ -5,7 +5,8 @@
    HOW TO ADD A PROJECT
    ─────────────────────
    Copy one project object, add it to the PROJECTS array.
-   Order here = order on the site.
+   Order here = order on the site — sorted tallest-image-first,
+   most square-shaped work last.
 
    FIELDS:
      id       — unique slug, no spaces
@@ -28,24 +29,27 @@
    ========================================================= */
 
 const PROJECTS = [
-
   {
     id:       'burning-eyes-poster',
     title:    'Burning Eyes',
     category: 'Posters',
     desc:     '',
     thumb:    'assets/work/Burning-Eyes-Poster.jpg',
-    images:   ['assets/work/Burning-Eyes-Poster.jpg'],
+    images:   [
+      'assets/work/Burning-Eyes-Poster.jpg'
+    ],
     size:     'sm'
   },
 
   {
     id:       'dont-skip-the-dentist-poster',
-    title:    "Don't Skip the Dentist",
+    title:    'Don\'t Skip the Dentist',
     category: 'Posters',
     desc:     '',
     thumb:    'assets/work/Dont-Skip-The-Dentist-Poster.jpg',
-    images:   ['assets/work/Dont-Skip-The-Dentist-Poster.jpg'],
+    images:   [
+      'assets/work/Dont-Skip-The-Dentist-Poster.jpg'
+    ],
     size:     'sm'
   },
 
@@ -55,7 +59,9 @@ const PROJECTS = [
     category: 'Posters',
     desc:     '',
     thumb:    'assets/work/Heart-Grenade-Poster.jpg',
-    images:   ['assets/work/Heart-Grenade-Poster.jpg'],
+    images:   [
+      'assets/work/Heart-Grenade-Poster.jpg'
+    ],
     size:     'sm'
   },
 
@@ -65,7 +71,9 @@ const PROJECTS = [
     category: 'Posters',
     desc:     '',
     thumb:    'assets/work/Mental-Health-Poster.jpg',
-    images:   ['assets/work/Mental-Health-Poster.jpg'],
+    images:   [
+      'assets/work/Mental-Health-Poster.jpg'
+    ],
     size:     'sm'
   },
 
@@ -88,7 +96,9 @@ const PROJECTS = [
     category: 'Posters',
     desc:     '',
     thumb:    'assets/work/Nailed-Hands.jpg',
-    images:   ['assets/work/Nailed-Hands.jpg'],
+    images:   [
+      'assets/work/Nailed-Hands.jpg'
+    ],
     size:     'sm'
   },
 
@@ -111,146 +121,9 @@ const PROJECTS = [
     category: 'Posters',
     desc:     '',
     thumb:    'assets/work/Tinnitus-Awareness-Poster.jpg',
-    images:   ['assets/work/Tinnitus-Awareness-Poster.jpg'],
-    size:     'sm'
-  },
-
-  {
-    id:       'roomys-kind-poster',
-    title:    "Roomy's Kind",
-    category: 'Posters',
-    desc:     '',
-    thumb:    'assets/work/Roomys-Kind-Poster.jpg',
     images:   [
-      'assets/work/Roomys-Kind-Poster.jpg',
-      'assets/work/Roomys-Kind-Poster-Blue.jpg'
+      'assets/work/Tinnitus-Awareness-Poster.jpg'
     ],
-    size:     'sm'
-  },
-
-  {
-    id:       'bmx-poster',
-    title:    'BMX',
-    category: 'Posters',
-    desc:     '',
-    thumb:    'assets/work/BMX-Poster.jpg',
-    images:   ['assets/work/BMX-Poster.jpg'],
-    size:     'sm'
-  },
-
-  {
-    id:       'gnarly-skate-poster',
-    title:    'Gnarly Skate',
-    category: 'Posters',
-    desc:     '',
-    thumb:    'assets/work/Gnarly-Skate-Poster.jpg',
-    images:   ['assets/work/Gnarly-Skate-Poster.jpg'],
-    size:     'sm'
-  },
-
-  {
-    id:       'japanese-drifting-poster',
-    title:    'Japanese Drifting',
-    category: 'Posters',
-    desc:     '',
-    thumb:    'assets/work/Japanese-Drifting-Poster.jpg',
-    images:   ['assets/work/Japanese-Drifting-Poster.jpg'],
-    size:     'sm'
-  },
-
-  {
-    id:       'overthinking-poster',
-    title:    'Overthinking',
-    category: 'Posters',
-    desc:     '',
-    thumb:    'assets/work/Overthinking-Poster.jpg',
-    images:   ['assets/work/Overthinking-Poster.jpg'],
-    size:     'sm'
-  },
-
-  {
-    id:       'rodney-mullen-skate-poster',
-    title:    'Rodney Mullen',
-    category: 'Posters',
-    desc:     '',
-    thumb:    'assets/work/Rodney-Mullen-Skate-Poster.jpg',
-    images:   ['assets/work/Rodney-Mullen-Skate-Poster.jpg'],
-    size:     'sm'
-  },
-
-  {
-    id:       'satan-is-a-liar-poster',
-    title:    'Satan Is a Liar',
-    category: 'Posters',
-    desc:     '',
-    thumb:    'assets/work/Satan-Is-a-Liar-Poster.jpg',
-    images:   ['assets/work/Satan-Is-a-Liar-Poster.jpg'],
-    size:     'sm'
-  },
-
-  {
-    id:       'social-media-slaves-poster',
-    title:    'Social Media Slaves',
-    category: 'Posters',
-    desc:     '',
-    thumb:    'assets/work/Social-Media-Slaves-Poster.jpg',
-    images:   ['assets/work/Social-Media-Slaves-Poster.jpg'],
-    size:     'sm'
-  },
-
-  {
-    id:       'crucified-skateboard-graphics',
-    title:    'Crucified Skateboard Graphics',
-    category: 'Graphics',
-    desc:     '',
-    thumb:    'assets/work/Crucified-Skateboad-Graphics.jpg',
-    images:   ['assets/work/Crucified-Skateboad-Graphics.jpg'],
-    size:     'sm'
-  },
-
-  /* ─────────────────────────────────────────────────────────
-     NEW WORK
-     Images with the same project name are grouped together.
-     Square work is intentionally kept at the very end.
-     ───────────────────────────────────────────────────────── */
-
-  {
-    id:       'ascii-flowers',
-    title:    'ASCII Flowers',
-    category: 'Posters',
-    desc:     '',
-    thumb:    'assets/work/ASCII Flowers-Posters.jpg',
-    images:   ['assets/work/ASCII Flowers-Posters.jpg'],
-    size:     'sm'
-  },
-
-  {
-    id:       'abortion-is-murder',
-    title:    'Abortion Is Murder',
-    category: 'Posters',
-    desc:     '',
-    thumb:    'assets/work/Abortion Is Murder-Posters.jpg',
-    images:   ['assets/work/Abortion Is Murder-Posters.jpg'],
-    size:     'sm'
-  },
-
-  {
-    id:       'anti-ai-art-fingerboard',
-    title:    'Anti AI Art Fingerboard Graphic',
-    category: 'Graphic Design',
-    desc:     '',
-    thumb:    'assets/work/Anti AI Art Fingerboard graphic-Graphic Design.jpg',
-    images:   ['assets/work/Anti AI Art Fingerboard graphic-Graphic Design.jpg'],
-    size:     'sm'
-  },
-
-  {
-    id:       'anti-satan-fingerboard',
-    title:    'Anti Satan Fingerboard Graphic',
-    category: 'Graphic Design',
-    desc:     '',
-    thumb:    'assets/work/Anti Satan Fingerboard Graphic-Graphic Design.jpg',
-    images:   ['assets/work/Anti Satan Fingerboard Graphic-Graphic Design.jpg'],
     size:     'sm'
   },
 
@@ -260,74 +133,9 @@ const PROJECTS = [
     category: 'Vector Graphics',
     desc:     '',
     thumb:    'assets/work/Bad Religion Vector Logo-Vector Graphics.jpg',
-    images:   ['assets/work/Bad Religion Vector Logo-Vector Graphics.jpg'],
-    size:     'sm'
-  },
-
-  {
-    id:       'banana-apple-carrot-core-graphics',
-    title:    'Banana Apple Carrot Core Graphics',
-    category: 'Vector Graphics',
-    desc:     '',
-    thumb:    'assets/work/Banana Apple Carrot Core Graphics-Vector Graphics.jpg',
     images:   [
-      'assets/work/Banana Apple Carrot Core Graphics-Vector Graphics.jpg',
-      'assets/work/Banana Apple Carrot Core Graphics-Vector Graphics 2.jpg',
-      'assets/work/Banana Apple Carrot Core Graphics-Vector Graphics 3.jpg'
+      'assets/work/Bad Religion Vector Logo-Vector Graphics.jpg'
     ],
-    size:     'sm'
-  },
-
-  {
-    id:       'eternal-life-fingerboard',
-    title:    'Eternal Life Fingerboard Graphic',
-    category: 'Graphic Design',
-    desc:     '',
-    thumb:    'assets/work/Eternal Life Fingerboard Graphic-Graphic Design.jpg',
-    images:   ['assets/work/Eternal Life Fingerboard Graphic-Graphic Design.jpg'],
-    size:     'sm'
-  },
-
-  {
-    id:       'fingerboard-graphic-design-teaktuning',
-    title:    'Fingerboard Graphic Design for TEAKtuning',
-    category: 'Graphic Design',
-    desc:     '',
-    thumb:    'assets/work/Fingerboard Graphic Design for TEAKtuning-Graphic Design.jpg',
-    images:   [
-      'assets/work/Fingerboard Graphic Design for TEAKtuning-Graphic Design.jpg',
-      'assets/work/Fingerboard Graphic Design for TEAKtuning-Graphic Design 2.jpg'
-    ],
-    size:     'sm'
-  },
-
-  {
-    id:       'fingerboard-graphic-design',
-    title:    'Fingerboard Graphic Design',
-    category: 'Graphic Design',
-    desc:     '',
-    thumb:    'assets/work/Fingerboard Graphic Design-Graphic Design.jpg',
-    images:   ['assets/work/Fingerboard Graphic Design-Graphic Design.jpg'],
-    size:     'sm'
-  },
-
-  {
-    id:       'fingerboard-graphic-fresh-baked',
-    title:    'Fingerboard Graphic — Fresh Baked Fingerboards',
-    category: 'Graphic Design',
-    desc:     '',
-    thumb:    'assets/work/Fingerboard Graphic Fresh Baked Fingerboards Graphic-Design.jpg',
-    images:   ['assets/work/Fingerboard Graphic Fresh Baked Fingerboards Graphic-Design.jpg'],
-    size:     'sm'
-  },
-
-  {
-    id:       'fingerboard-hardware',
-    title:    'Fingerboard Hardware',
-    category: 'Vector Graphics',
-    desc:     '',
-    thumb:    'assets/work/Fingerboard Hardware-Vector Graphics.jpg',
-    images:   ['assets/work/Fingerboard Hardware-Vector Graphics.jpg'],
     size:     'sm'
   },
 
@@ -340,19 +148,6 @@ const PROJECTS = [
     images:   [
       'assets/work/Gnarly-Fingerboard-Graphic-Graphic Design.jpg',
       'assets/work/Gnarly Fingerboard Graphic-Graphic design 2.jpg'
-    ],
-    size:     'sm'
-  },
-
-  {
-    id:       'goliath-graphic',
-    title:    'Goliath Graphic',
-    category: 'Print Design',
-    desc:     '',
-    thumb:    'assets/work/Goliath Graphic-Print Design.jpg',
-    images:   [
-      'assets/work/Goliath Graphic-Print Design.jpg',
-      'assets/work/Goliath Graphic-Print Design 2.jpg'
     ],
     size:     'sm'
   },
@@ -384,22 +179,14 @@ const PROJECTS = [
   },
 
   {
-    id:       'ichthys-fingerboard-graphic',
-    title:    'Ichthys Fingerboard Graphic',
-    category: 'Graphic Design',
-    desc:     '',
-    thumb:    'assets/work/Ichthys Fingerboard Graphic-Graphic Design.jpg',
-    images:   ['assets/work/Ichthys Fingerboard Graphic-Graphic Design.jpg'],
-    size:     'sm'
-  },
-
-  {
     id:       'leefai-fingerboard-graphic-banana-boi',
     title:    'Leefai Fingerboard Graphic — Banana Boi',
     category: 'Graphic Design',
     desc:     '',
     thumb:    'assets/work/Leefai Fingerboard Graphic Banana Boi-Graphic design.jpg',
-    images:   ['assets/work/Leefai Fingerboard Graphic Banana Boi-Graphic design.jpg'],
+    images:   [
+      'assets/work/Leefai Fingerboard Graphic Banana Boi-Graphic design.jpg'
+    ],
     size:     'sm'
   },
 
@@ -417,12 +204,284 @@ const PROJECTS = [
   },
 
   {
+    id:       'shred-fingerboard-graphic',
+    title:    'Shred Fingerboard Graphic',
+    category: 'Graphic Design',
+    desc:     '',
+    thumb:    'assets/work/Shred-Fingerboard-Graphic-Graphic Design.jpg',
+    images:   [
+      'assets/work/Shred-Fingerboard-Graphic-Graphic Design.jpg',
+      'assets/work/Shred Fingerboard Graphic-Graphic Design 2.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'roomys-kind-poster',
+    title:    'Roomy\'s Kind',
+    category: 'Posters',
+    desc:     '',
+    thumb:    'assets/work/Roomys-Kind-Poster.jpg',
+    images:   [
+      'assets/work/Roomys-Kind-Poster.jpg',
+      'assets/work/Roomys-Kind-Poster-Blue.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'bmx-poster',
+    title:    'BMX',
+    category: 'Posters',
+    desc:     '',
+    thumb:    'assets/work/BMX-Poster.jpg',
+    images:   [
+      'assets/work/BMX-Poster.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'gnarly-skate-poster',
+    title:    'Gnarly Skate',
+    category: 'Posters',
+    desc:     '',
+    thumb:    'assets/work/Gnarly-Skate-Poster.jpg',
+    images:   [
+      'assets/work/Gnarly-Skate-Poster.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'japanese-drifting-poster',
+    title:    'Japanese Drifting',
+    category: 'Posters',
+    desc:     '',
+    thumb:    'assets/work/Japanese-Drifting-Poster.jpg',
+    images:   [
+      'assets/work/Japanese-Drifting-Poster.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'overthinking-poster',
+    title:    'Overthinking',
+    category: 'Posters',
+    desc:     '',
+    thumb:    'assets/work/Overthinking-Poster.jpg',
+    images:   [
+      'assets/work/Overthinking-Poster.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'rodney-mullen-skate-poster',
+    title:    'Rodney Mullen',
+    category: 'Posters',
+    desc:     '',
+    thumb:    'assets/work/Rodney-Mullen-Skate-Poster.jpg',
+    images:   [
+      'assets/work/Rodney-Mullen-Skate-Poster.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'satan-is-a-liar-poster',
+    title:    'Satan Is a Liar',
+    category: 'Posters',
+    desc:     '',
+    thumb:    'assets/work/Satan-Is-a-Liar-Poster.jpg',
+    images:   [
+      'assets/work/Satan-Is-a-Liar-Poster.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'social-media-slaves-poster',
+    title:    'Social Media Slaves',
+    category: 'Posters',
+    desc:     '',
+    thumb:    'assets/work/Social-Media-Slaves-Poster.jpg',
+    images:   [
+      'assets/work/Social-Media-Slaves-Poster.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'crucified-skateboard-graphics',
+    title:    'Crucified Skateboard Graphics',
+    category: 'Graphics',
+    desc:     '',
+    thumb:    'assets/work/Crucified-Skateboad-Graphics.jpg',
+    images:   [
+      'assets/work/Crucified-Skateboad-Graphics.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'ascii-flowers',
+    title:    'ASCII Flowers',
+    category: 'Posters',
+    desc:     '',
+    thumb:    'assets/work/ASCII Flowers-Posters.jpg',
+    images:   [
+      'assets/work/ASCII Flowers-Posters.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'abortion-is-murder',
+    title:    'Abortion Is Murder',
+    category: 'Posters',
+    desc:     '',
+    thumb:    'assets/work/Abortion Is Murder-Posters.jpg',
+    images:   [
+      'assets/work/Abortion Is Murder-Posters.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'anti-ai-art-fingerboard',
+    title:    'Anti AI Art Fingerboard Graphic',
+    category: 'Graphic Design',
+    desc:     '',
+    thumb:    'assets/work/Anti AI Art Fingerboard graphic-Graphic Design.jpg',
+    images:   [
+      'assets/work/Anti AI Art Fingerboard graphic-Graphic Design.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'anti-satan-fingerboard',
+    title:    'Anti Satan Fingerboard Graphic',
+    category: 'Graphic Design',
+    desc:     '',
+    thumb:    'assets/work/Anti Satan Fingerboard Graphic-Graphic Design.jpg',
+    images:   [
+      'assets/work/Anti Satan Fingerboard Graphic-Graphic Design.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'banana-apple-carrot-core-graphics',
+    title:    'Banana Apple Carrot Core Graphics',
+    category: 'Vector Graphics',
+    desc:     '',
+    thumb:    'assets/work/Banana Apple Carrot Core Graphics-Vector Graphics.jpg',
+    images:   [
+      'assets/work/Banana Apple Carrot Core Graphics-Vector Graphics.jpg',
+      'assets/work/Banana Apple Carrot Core Graphics-Vector Graphics 2.jpg',
+      'assets/work/Banana Apple Carrot Core Graphics-Vector Graphics 3.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'eternal-life-fingerboard',
+    title:    'Eternal Life Fingerboard Graphic',
+    category: 'Graphic Design',
+    desc:     '',
+    thumb:    'assets/work/Eternal Life Fingerboard Graphic-Graphic Design.jpg',
+    images:   [
+      'assets/work/Eternal Life Fingerboard Graphic-Graphic Design.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'fingerboard-graphic-design-teaktuning',
+    title:    'Fingerboard Graphic Design for TEAKtuning',
+    category: 'Graphic Design',
+    desc:     '',
+    thumb:    'assets/work/Fingerboard Graphic Design for TEAKtuning-Graphic Design.jpg',
+    images:   [
+      'assets/work/Fingerboard Graphic Design for TEAKtuning-Graphic Design.jpg',
+      'assets/work/Fingerboard Graphic Design for TEAKtuning-Graphic Design 2.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'fingerboard-graphic-design',
+    title:    'Fingerboard Graphic Design',
+    category: 'Graphic Design',
+    desc:     '',
+    thumb:    'assets/work/Fingerboard Graphic Design-Graphic Design.jpg',
+    images:   [
+      'assets/work/Fingerboard Graphic Design-Graphic Design.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'fingerboard-graphic-fresh-baked',
+    title:    'Fingerboard Graphic — Fresh Baked Fingerboards',
+    category: 'Graphic Design',
+    desc:     '',
+    thumb:    'assets/work/Fingerboard Graphic Fresh Baked Fingerboards Graphic-Design.jpg',
+    images:   [
+      'assets/work/Fingerboard Graphic Fresh Baked Fingerboards Graphic-Design.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'fingerboard-hardware',
+    title:    'Fingerboard Hardware',
+    category: 'Vector Graphics',
+    desc:     '',
+    thumb:    'assets/work/Fingerboard Hardware-Vector Graphics.jpg',
+    images:   [
+      'assets/work/Fingerboard Hardware-Vector Graphics.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'goliath-graphic',
+    title:    'Goliath Graphic',
+    category: 'Print Design',
+    desc:     '',
+    thumb:    'assets/work/Goliath Graphic-Print Design.jpg',
+    images:   [
+      'assets/work/Goliath Graphic-Print Design.jpg',
+      'assets/work/Goliath Graphic-Print Design 2.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'ichthys-fingerboard-graphic',
+    title:    'Ichthys Fingerboard Graphic',
+    category: 'Graphic Design',
+    desc:     '',
+    thumb:    'assets/work/Ichthys Fingerboard Graphic-Graphic Design.jpg',
+    images:   [
+      'assets/work/Ichthys Fingerboard Graphic-Graphic Design.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
     id:       'nuke-fingerboard-graphic',
     title:    'Nuke Fingerboard Graphic',
     category: 'Graphic Design',
     desc:     '',
     thumb:    'assets/work/Nuke Fingerboard Graphic-Graphic Design.jpg',
-    images:   ['assets/work/Nuke Fingerboard Graphic-Graphic Design.jpg'],
+    images:   [
+      'assets/work/Nuke Fingerboard Graphic-Graphic Design.jpg'
+    ],
     size:     'sm'
   },
 
@@ -436,19 +495,6 @@ const PROJECTS = [
       'assets/work/Saved By Grace Fingerboard Graphics-Graphic Design.jpg',
       'assets/work/Saved By Grace Fingerboard Graphics-Graphic Design 2.jpg',
       'assets/work/Saved By Grace Fingerboard Graphics-Graphic Design 3.jpg'
-    ],
-    size:     'sm'
-  },
-
-  {
-    id:       'shred-fingerboard-graphic',
-    title:    'Shred Fingerboard Graphic',
-    category: 'Graphic Design',
-    desc:     '',
-    thumb:    'assets/work/Shred-Fingerboard-Graphic-Graphic Design.jpg',
-    images:   [
-      'assets/work/Shred-Fingerboard-Graphic-Graphic Design.jpg',
-      'assets/work/Shred Fingerboard Graphic-Graphic Design 2.jpg'
     ],
     size:     'sm'
   },
@@ -485,7 +531,9 @@ const PROJECTS = [
     category: 'Graphic Design',
     desc:     '',
     thumb:    'assets/work/Synthwave Fingerboard Graphic-Graphic design.jpg',
-    images:   ['assets/work/Synthwave Fingerboard Graphic-Graphic design.jpg'],
+    images:   [
+      'assets/work/Synthwave Fingerboard Graphic-Graphic design.jpg'
+    ],
     size:     'sm'
   },
 
@@ -495,7 +543,9 @@ const PROJECTS = [
     category: 'Poster Design',
     desc:     '',
     thumb:    'assets/work/The Eye Is The Lamp Of The Body-Posters.jpg',
-    images:   ['assets/work/The Eye Is The Lamp Of The Body-Posters.jpg'],
+    images:   [
+      'assets/work/The Eye Is The Lamp Of The Body-Posters.jpg'
+    ],
     size:     'sm'
   },
 
@@ -512,14 +562,162 @@ const PROJECTS = [
     size:     'sm'
   },
 
-  /* Square work — kept last intentionally */
+  {
+    id:       'broken-horns',
+    title:    'Broken Horns',
+    category: 'Vector Graphics',
+    desc:     '',
+    thumb:    'assets/work/Broken Horns-Vector Graphics.jpg',
+    images:   [
+      'assets/work/Broken Horns-Vector Graphics.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'fernish-logo',
+    title:    'Fernish Logo',
+    category: 'Logo Design',
+    desc:     '',
+    thumb:    'assets/work/Fernish Logo-Logo Design.jpg',
+    images:   [
+      'assets/work/Fernish Logo-Logo Design.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
+    id:       'tinnitus',
+    title:    'Tinnitus',
+    category: 'Poster Design',
+    desc:     '',
+    thumb:    'assets/work/Tinnitus-Poster Design.jpg',
+    images:   [
+      'assets/work/Tinnitus-Poster Design.jpg',
+      'assets/work/Tinnitus-Poster Design 2.jpg'
+    ],
+    size:     'sm'
+  },
+
   {
     id:       'sober-minder-fingerboard-graphic',
     title:    'Sober Minder Fingerboard Graphic',
     category: 'Graphic Design',
     desc:     '',
     thumb:    'assets/work/Sober-Minder-Fingerboard-Graphic-Graphic-Design.jpg',
-    images:   ['assets/work/Sober-Minder-Fingerboard-Graphic-Graphic-Design.jpg'],
+    images:   [
+      'assets/work/Sober-Minder-Fingerboard-Graphic-Graphic-Design.jpg'
+    ],
+    size:     'md'
+  },
+
+  {
+    id:       'all-lives-matter',
+    title:    'All Lives Matter',
+    category: 'Graphic Design',
+    desc:     '',
+    thumb:    'assets/work/All Lives Matter-Graphic Design.jpg',
+    images:   [
+      'assets/work/All Lives Matter-Graphic Design.jpg',
+      'assets/work/All Lives Matter-Graphic Design 2.jpg',
+      'assets/work/All Lives Matter-Graphic Design 3.jpg'
+    ],
+    size:     'md'
+  },
+
+  {
+    id:       'cubemc-cube',
+    title:    'Cubemc Cube',
+    category: 'Vector Graphics',
+    desc:     '',
+    thumb:    'assets/work/Cubemc Cube-Vector Graphics.jpg',
+    images:   [
+      'assets/work/Cubemc Cube-Vector Graphics.jpg'
+    ],
+    size:     'md'
+  },
+
+  {
+    id:       'faith',
+    title:    'Faith',
+    category: 'Graphic Design',
+    desc:     '',
+    thumb:    'assets/work/Faith-Graphic Design.jpg',
+    images:   [
+      'assets/work/Faith-Graphic Design.jpg'
+    ],
+    size:     'md'
+  },
+
+  {
+    id:       'juno-106-synthesizer',
+    title:    'Juno-106 Synthesizer',
+    category: 'Vector Graphics',
+    desc:     '',
+    thumb:    'assets/work/Juno-106 Synthesizer-Vector Graphics.jpg',
+    images:   [
+      'assets/work/Juno-106 Synthesizer-Vector Graphics.jpg'
+    ],
+    size:     'md'
+  },
+
+  {
+    id:       'moogerfooger-mf-102-ring-modulator',
+    title:    'Moogerfooger MF-102 Ring Modulator',
+    category: 'Vector Graphics',
+    desc:     '',
+    thumb:    'assets/work/Moogerfooger MF-102 Ring Modulator-Vector Graphics.jpg',
+    images:   [
+      'assets/work/Moogerfooger MF-102 Ring Modulator-Vector Graphics.jpg'
+    ],
+    size:     'md'
+  },
+
+  {
+    id:       'moogerfooger-mf-104m-analog-delay',
+    title:    'Moogerfooger MF-104M Analog Delay',
+    category: 'Vector Graphics',
+    desc:     '',
+    thumb:    'assets/work/Moogerfooger MF-104M Analog Delay-Vector Graphics.jpg',
+    images:   [
+      'assets/work/Moogerfooger MF-104M Analog Delay-Vector Graphics.jpg'
+    ],
+    size:     'md'
+  },
+
+  {
+    id:       'moogerfooger-mf-108m-vectorization',
+    title:    'Moogerfooger MF-108M Vectorization',
+    category: 'Vector Graphics',
+    desc:     '',
+    thumb:    'assets/work/Moogerfooger MF-108M Vectorization-Vector Graphics.jpg',
+    images:   [
+      'assets/work/Moogerfooger MF-108M Vectorization-Vector Graphics.jpg'
+    ],
+    size:     'md'
+  },
+
+  {
+    id:       'moogerfooger-midi-murf',
+    title:    'Moogerfooger MIDI MuRF',
+    category: 'Vector Graphics',
+    desc:     '',
+    thumb:    'assets/work/Moogerfooger MIDI MuRF-Vector Graphics.jpg',
+    images:   [
+      'assets/work/Moogerfooger MIDI MuRF-Vector Graphics.jpg'
+    ],
+    size:     'md'
+  },
+
+  {
+    id:       'table-in-the-wilderness-logo',
+    title:    'Table In The Wilderness Logo',
+    category: 'Logo Design',
+    desc:     '',
+    thumb:    'assets/work/Table In The Wilderness Logo-Logo Design.jpg',
+    images:   [
+      'assets/work/Table In The Wilderness Logo-Logo Design.jpg'
+    ],
     size:     'md'
   }
 

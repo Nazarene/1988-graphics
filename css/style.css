@@ -618,6 +618,7 @@ main > *:first-child { padding-top: var(--nav-h); }
 .pf-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-auto-flow: dense;
   gap: 3px;
   background-color: var(--ink);
   padding: 3px;
