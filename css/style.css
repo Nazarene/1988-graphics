@@ -15,7 +15,7 @@
   --paper-dark:    #b8b3a8;   /* for muted elements */
   --ink-mid:       #4a4740;
   --ink-light:     #7a7670;
-  --ink-dim:       #3a3733;
+  --ink-dim:       #726d65;
 
   /* The only colour accent */
   --accent:        #d6f000;   /* neon xerox yellow-green */
@@ -624,10 +624,22 @@ main > *:first-child { padding-top: var(--nav-h); }
   padding: 3px;
 }
 
-.pf-grid .pf-item[data-size="sm"] { grid-column: span 3; }
-.pf-grid .pf-item[data-size="md"] { grid-column: span 4; }
-.pf-grid .pf-item[data-size="lg"] { grid-column: span 6; }
-.pf-grid .pf-item[data-size="xl"] { grid-column: span 12; }
+.pf-grid .pf-item[data-size="sm"] { grid-column: span 3; aspect-ratio: 4 / 5; }
+.pf-grid .pf-item[data-size="md"] { grid-column: span 4; aspect-ratio: 1 / 1; }
+.pf-grid .pf-item[data-size="lg"] { grid-column: span 6; aspect-ratio: 16 / 10; }
+.pf-grid .pf-item[data-size="xl"] { grid-column: span 12; aspect-ratio: 21 / 9; }
+
+/* Fill each tile completely (crops the image) so no row-height
+   mismatch between neighboring tiles can ever leave empty space.
+   Scoped to .pf-grid only — portfolio.html's masonry layout keeps
+   showing full, uncropped images at their natural height. */
+.pf-grid .pf-item__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* ── Shared pf-item styles ── */
 .pf-item {
@@ -728,7 +740,7 @@ main > *:first-child { padding-top: var(--nav-h); }
   font-size: 0.56rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #252320;
+  color: var(--ink-dim);
   text-align: center;
   padding-inline: 1rem;
   line-height: 2;
@@ -1127,7 +1139,7 @@ main > *:first-child { padding-top: var(--nav-h); }
   font-size: 0.58rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #242320;
+  color: var(--ink-dim);
   text-align: center;
   padding: 1rem;
   line-height: 2;
@@ -1139,7 +1151,7 @@ main > *:first-child { padding-top: var(--nav-h); }
   font-size: 0.58rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #2e2c28;
+  color: var(--ink-dim);
 }
 
 /* Text column */
