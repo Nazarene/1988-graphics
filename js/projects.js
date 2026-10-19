@@ -540,7 +540,7 @@ const PROJECTS = [
   {
     id:       'the-eye-is-the-lamp-of-the-body',
     title:    'The Eye Is The Lamp Of The Body',
-    category: 'Poster Design',
+    category: 'Posters',
     desc:     'A faith-themed poster design.',
     thumb:    'assets/work/The Eye Is The Lamp Of The Body-Posters.jpg',
     images:   [
@@ -589,7 +589,7 @@ const PROJECTS = [
   {
     id:       'tinnitus',
     title:    'Tinnitus',
-    category: 'Poster Design',
+    category: 'Posters',
     desc:     'A poster design on the theme of tinnitus.',
     thumb:    'assets/work/Tinnitus-Poster Design.jpg',
     images:   [
