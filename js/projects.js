@@ -33,7 +33,7 @@ const PROJECTS = [
     id:       'burning-eyes-poster',
     title:    'Burning Eyes',
     category: 'Posters',
-    desc:     '',
+    desc:     'A bold, high-contrast poster design.',
     thumb:    'assets/work/Burning-Eyes-Poster.jpg',
     images:   [
       'assets/work/Burning-Eyes-Poster.jpg'
@@ -45,7 +45,7 @@ const PROJECTS = [
     id:       'dont-skip-the-dentist-poster',
     title:    'Don\'t Skip the Dentist',
     category: 'Posters',
-    desc:     '',
+    desc:     'A poster built around a dental health message.',
     thumb:    'assets/work/Dont-Skip-The-Dentist-Poster.jpg',
     images:   [
       'assets/work/Dont-Skip-The-Dentist-Poster.jpg'
@@ -57,7 +57,7 @@ const PROJECTS = [
     id:       'heart-grenade-poster',
     title:    'Heart Grenade',
     category: 'Posters',
-    desc:     '',
+    desc:     'A poster built around a striking heart-and-grenade motif.',
     thumb:    'assets/work/Heart-Grenade-Poster.jpg',
     images:   [
       'assets/work/Heart-Grenade-Poster.jpg'
@@ -69,7 +69,7 @@ const PROJECTS = [
     id:       'mental-health-poster',
     title:    'Mental Health',
     category: 'Posters',
-    desc:     '',
+    desc:     'A poster addressing mental health awareness.',
     thumb:    'assets/work/Mental-Health-Poster.jpg',
     images:   [
       'assets/work/Mental-Health-Poster.jpg'
@@ -81,7 +81,7 @@ const PROJECTS = [
     id:       'malcolm-in-the-middle-punk-poster',
     title:    'Malcolm in the Middle',
     category: 'Posters',
-    desc:     '',
+    desc:     'A crust punk and grind core-style poster riffing on the Malcolm in the Middle theme.',
     thumb:    'assets/work/Malcolm-In-The-Middle-Punk-Poster.jpg',
     images:   [
       'assets/work/Malcolm-In-The-Middle-Punk-Poster.jpg',
@@ -94,7 +94,7 @@ const PROJECTS = [
     id:       'nailed-hands',
     title:    'Nailed Hands',
     category: 'Posters',
-    desc:     '',
+    desc:     'A poster depicting the pierced hands of Jesus Christ.',
     thumb:    'assets/work/Nailed-Hands.jpg',
     images:   [
       'assets/work/Nailed-Hands.jpg'
@@ -106,7 +106,7 @@ const PROJECTS = [
     id:       'heart-ache-poster',
     title:    'Heart Ache',
     category: 'Posters',
-    desc:     '',
+    desc:     'A poster of a heart pierced with nails in a photocopy zine aesthetic.',
     thumb:    'assets/work/Heart-Ache-Poster.jpg',
     images:   [
       'assets/work/Heart-Ache-Poster.jpg',
@@ -119,7 +119,7 @@ const PROJECTS = [
     id:       'tinnitus-awareness-poster',
     title:    'Tinnitus Awareness',
     category: 'Posters',
-    desc:     '',
+    desc:     'An awareness poster on tinnitus.',
     thumb:    'assets/work/Tinnitus-Awareness-Poster.jpg',
     images:   [
       'assets/work/Tinnitus-Awareness-Poster.jpg'
@@ -131,7 +131,7 @@ const PROJECTS = [
     id:       'bad-religion-vector-logo',
     title:    'Bad Religion Vector Logo',
     category: 'Vector Graphics',
-    desc:     '',
+    desc:     'A vectorized logo parody piece inspired by the band Bad Religion.',
     thumb:    'assets/work/Bad Religion Vector Logo-Vector Graphics.jpg',
     images:   [
       'assets/work/Bad Religion Vector Logo-Vector Graphics.jpg'
@@ -143,7 +143,7 @@ const PROJECTS = [
     id:       'gnarly-fingerboard-graphic',
     title:    'Gnarly Fingerboard Graphic',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'Eye balls fingerboard deck graphic design with a photocopy halftone aesthetic.',
     thumb:    'assets/work/Gnarly-Fingerboard-Graphic-Graphic Design.jpg',
     images:   [
       'assets/work/Gnarly-Fingerboard-Graphic-Graphic Design.jpg',
@@ -156,7 +156,7 @@ const PROJECTS = [
     id:       'grind-fingerboard-graphic',
     title:    'Grind Fingerboard Graphic',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'Skeleton and bones fingerboard deck graphic design photocopy aesthetic.',
     thumb:    'assets/work/Grind-Fingerboard-Graphic-Graphic Design.jpg',
     images:   [
       'assets/work/Grind-Fingerboard-Graphic-Graphic Design.jpg',
@@ -169,7 +169,7 @@ const PROJECTS = [
     id:       'i-cut-you-fingerboard-graphic',
     title:    'I Cut You Fingerboard Graphic',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'Knife fingerboard deck graphic design.',
     thumb:    'assets/work/I-Cut-You-Fingerboard-Graphic-Graphic Design.jpg',
     images:   [
       'assets/work/I-Cut-You-Fingerboard-Graphic-Graphic Design.jpg',
@@ -182,7 +182,7 @@ const PROJECTS = [
     id:       'leefai-fingerboard-graphic-banana-boi',
     title:    'Leefai Fingerboard Graphic — Banana Boi',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'Banana graphic fingerboard deck graphic for Leefai.',
     thumb:    'assets/work/Leefai Fingerboard Graphic Banana Boi-Graphic design.jpg',
     images:   [
       'assets/work/Leefai Fingerboard Graphic Banana Boi-Graphic design.jpg'
@@ -194,7 +194,7 @@ const PROJECTS = [
     id:       'leefai-fingerboard-logo-design',
     title:    'Leefai Fingerboard Logo Design',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'Grind core blackmetal death metal Logo design for the Leefai fingerboards.',
     thumb:    'assets/work/Leefai Fingerboard Logo design-Graphic Design.jpg',
     images:   [
       'assets/work/Leefai Fingerboard Logo design-Graphic Design.jpg',
@@ -207,7 +207,7 @@ const PROJECTS = [
     id:       'shred-fingerboard-graphic',
     title:    'Shred Fingerboard Graphic',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'Shred logo with two hands Fingerboard deck graphic design.',
     thumb:    'assets/work/Shred-Fingerboard-Graphic-Graphic Design.jpg',
     images:   [
       'assets/work/Shred-Fingerboard-Graphic-Graphic Design.jpg',
@@ -220,7 +220,7 @@ const PROJECTS = [
     id:       'roomys-kind-poster',
     title:    'Roomy\'s Kind',
     category: 'Posters',
-    desc:     '',
+    desc:     'Collage of a icecream cone.',
     thumb:    'assets/work/Roomys-Kind-Poster.jpg',
     images:   [
       'assets/work/Roomys-Kind-Poster.jpg',
@@ -233,7 +233,7 @@ const PROJECTS = [
     id:       'bmx-poster',
     title:    'BMX',
     category: 'Posters',
-    desc:     '',
+    desc:     'A BMX-themed poster design.',
     thumb:    'assets/work/BMX-Poster.jpg',
     images:   [
       'assets/work/BMX-Poster.jpg'
@@ -245,7 +245,7 @@ const PROJECTS = [
     id:       'gnarly-skate-poster',
     title:    'Gnarly Skate',
     category: 'Posters',
-    desc:     '',
+    desc:     'A skate-culture poster design.',
     thumb:    'assets/work/Gnarly-Skate-Poster.jpg',
     images:   [
       'assets/work/Gnarly-Skate-Poster.jpg'
@@ -257,7 +257,7 @@ const PROJECTS = [
     id:       'japanese-drifting-poster',
     title:    'Japanese Drifting',
     category: 'Posters',
-    desc:     '',
+    desc:     'A poster inspired by Japanese drift culture.',
     thumb:    'assets/work/Japanese-Drifting-Poster.jpg',
     images:   [
       'assets/work/Japanese-Drifting-Poster.jpg'
@@ -269,7 +269,7 @@ const PROJECTS = [
     id:       'overthinking-poster',
     title:    'Overthinking',
     category: 'Posters',
-    desc:     '',
+    desc:     'A poster exploring the theme of overthinking.',
     thumb:    'assets/work/Overthinking-Poster.jpg',
     images:   [
       'assets/work/Overthinking-Poster.jpg'
@@ -281,7 +281,7 @@ const PROJECTS = [
     id:       'rodney-mullen-skate-poster',
     title:    'Rodney Mullen',
     category: 'Posters',
-    desc:     '',
+    desc:     'A skate poster tribute to Rodney Mullen.',
     thumb:    'assets/work/Rodney-Mullen-Skate-Poster.jpg',
     images:   [
       'assets/work/Rodney-Mullen-Skate-Poster.jpg'
@@ -293,7 +293,7 @@ const PROJECTS = [
     id:       'satan-is-a-liar-poster',
     title:    'Satan Is a Liar',
     category: 'Posters',
-    desc:     '',
+    desc:     'Anti satanic poster.',
     thumb:    'assets/work/Satan-Is-a-Liar-Poster.jpg',
     images:   [
       'assets/work/Satan-Is-a-Liar-Poster.jpg'
@@ -305,7 +305,7 @@ const PROJECTS = [
     id:       'social-media-slaves-poster',
     title:    'Social Media Slaves',
     category: 'Posters',
-    desc:     '',
+    desc:     'A poster critiquing social media culture.',
     thumb:    'assets/work/Social-Media-Slaves-Poster.jpg',
     images:   [
       'assets/work/Social-Media-Slaves-Poster.jpg'
@@ -314,10 +314,10 @@ const PROJECTS = [
   },
 
   {
-    id:       'crucified-skateboard-graphics',
-    title:    'Crucified Skateboard Graphics',
+    id:       'crucified-fingerboard-graphic',
+    title:    'Crucified Fingerboard Graphic',
     category: 'Graphics',
-    desc:     '',
+    desc:     'Jesus crucified fingerboard graphic design.',
     thumb:    'assets/work/Crucified-Skateboad-Graphics.jpg',
     images:   [
       'assets/work/Crucified-Skateboad-Graphics.jpg'
@@ -329,7 +329,7 @@ const PROJECTS = [
     id:       'ascii-flowers',
     title:    'ASCII Flowers',
     category: 'Posters',
-    desc:     '',
+    desc:     'A poster built from ASCII-style floral artwork.',
     thumb:    'assets/work/ASCII Flowers-Posters.jpg',
     images:   [
       'assets/work/ASCII Flowers-Posters.jpg'
@@ -341,7 +341,7 @@ const PROJECTS = [
     id:       'abortion-is-murder',
     title:    'Abortion Is Murder',
     category: 'Posters',
-    desc:     '',
+    desc:     'A pro-life themed poster piece.',
     thumb:    'assets/work/Abortion Is Murder-Posters.jpg',
     images:   [
       'assets/work/Abortion Is Murder-Posters.jpg'
@@ -353,7 +353,7 @@ const PROJECTS = [
     id:       'anti-ai-art-fingerboard',
     title:    'Anti AI Art Fingerboard Graphic',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'Fingerboard deck graphic on the theme of AI-generated art.',
     thumb:    'assets/work/Anti AI Art Fingerboard graphic-Graphic Design.jpg',
     images:   [
       'assets/work/Anti AI Art Fingerboard graphic-Graphic Design.jpg'
@@ -365,7 +365,7 @@ const PROJECTS = [
     id:       'anti-satan-fingerboard',
     title:    'Anti Satan Fingerboard Graphic',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'Fingerboard deck graphic design.',
     thumb:    'assets/work/Anti Satan Fingerboard Graphic-Graphic Design.jpg',
     images:   [
       'assets/work/Anti Satan Fingerboard Graphic-Graphic Design.jpg'
@@ -377,7 +377,7 @@ const PROJECTS = [
     id:       'banana-apple-carrot-core-graphics',
     title:    'Banana Apple Carrot Core Graphics',
     category: 'Vector Graphics',
-    desc:     '',
+    desc:     'Vectorized fruit and vegetable graphics.',
     thumb:    'assets/work/Banana Apple Carrot Core Graphics-Vector Graphics.jpg',
     images:   [
       'assets/work/Banana Apple Carrot Core Graphics-Vector Graphics.jpg',
@@ -391,7 +391,7 @@ const PROJECTS = [
     id:       'eternal-life-fingerboard',
     title:    'Eternal Life Fingerboard Graphic',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'Fingerboard deck graphic design.',
     thumb:    'assets/work/Eternal Life Fingerboard Graphic-Graphic Design.jpg',
     images:   [
       'assets/work/Eternal Life Fingerboard Graphic-Graphic Design.jpg'
@@ -403,7 +403,7 @@ const PROJECTS = [
     id:       'fingerboard-graphic-design-teaktuning',
     title:    'Fingerboard Graphic Design for TEAKtuning',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'Fingerboard deck graphic designed for TEAKtuning.',
     thumb:    'assets/work/Fingerboard Graphic Design for TEAKtuning-Graphic Design.jpg',
     images:   [
       'assets/work/Fingerboard Graphic Design for TEAKtuning-Graphic Design.jpg',
@@ -416,7 +416,7 @@ const PROJECTS = [
     id:       'fingerboard-graphic-design',
     title:    'Fingerboard Graphic Design',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'Fingerboard deck graphic design.',
     thumb:    'assets/work/Fingerboard Graphic Design-Graphic Design.jpg',
     images:   [
       'assets/work/Fingerboard Graphic Design-Graphic Design.jpg'
@@ -428,7 +428,7 @@ const PROJECTS = [
     id:       'fingerboard-graphic-fresh-baked',
     title:    'Fingerboard Graphic — Fresh Baked Fingerboards',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'Fingerboard deck graphic for Fresh Baked Fingerboards.',
     thumb:    'assets/work/Fingerboard Graphic Fresh Baked Fingerboards Graphic-Design.jpg',
     images:   [
       'assets/work/Fingerboard Graphic Fresh Baked Fingerboards Graphic-Design.jpg'
@@ -440,7 +440,7 @@ const PROJECTS = [
     id:       'fingerboard-hardware',
     title:    'Fingerboard Hardware',
     category: 'Vector Graphics',
-    desc:     '',
+    desc:     'Vectorized fingerboard hardware illustration.',
     thumb:    'assets/work/Fingerboard Hardware-Vector Graphics.jpg',
     images:   [
       'assets/work/Fingerboard Hardware-Vector Graphics.jpg'
@@ -452,7 +452,7 @@ const PROJECTS = [
     id:       'goliath-graphic',
     title:    'Goliath Graphic',
     category: 'Print Design',
-    desc:     '',
+    desc:     'A print design piece.',
     thumb:    'assets/work/Goliath Graphic-Print Design.jpg',
     images:   [
       'assets/work/Goliath Graphic-Print Design.jpg',
@@ -465,7 +465,7 @@ const PROJECTS = [
     id:       'ichthys-fingerboard-graphic',
     title:    'Ichthys Fingerboard Graphic',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'Fingerboard deck graphic built around the ichthys (fish) symbol.',
     thumb:    'assets/work/Ichthys Fingerboard Graphic-Graphic Design.jpg',
     images:   [
       'assets/work/Ichthys Fingerboard Graphic-Graphic Design.jpg'
@@ -477,7 +477,7 @@ const PROJECTS = [
     id:       'nuke-fingerboard-graphic',
     title:    'Nuke Fingerboard Graphic',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'Fingerboard deck graphic design.',
     thumb:    'assets/work/Nuke Fingerboard Graphic-Graphic Design.jpg',
     images:   [
       'assets/work/Nuke Fingerboard Graphic-Graphic Design.jpg'
@@ -489,7 +489,7 @@ const PROJECTS = [
     id:       'saved-by-grace-fingerboard-graphics',
     title:    'Saved By Grace Fingerboard Graphics',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'Fingerboard deck graphic design.',
     thumb:    'assets/work/Saved By Grace Fingerboard Graphics-Graphic Design.jpg',
     images:   [
       'assets/work/Saved By Grace Fingerboard Graphics-Graphic Design.jpg',
@@ -503,7 +503,7 @@ const PROJECTS = [
     id:       'signature-fingerboard-graphic-fresh-baked',
     title:    'Signature Fingerboard Graphic — Fresh Baked Fingerboards',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'Signature fingerboard deck graphic for Fresh Baked Fingerboards.',
     thumb:    'assets/work/Signature Fingerboard Graphic-Fresh Baked Fingerboards-Graphic Design.jpg',
     images:   [
       'assets/work/Signature Fingerboard Graphic-Fresh Baked Fingerboards-Graphic Design.jpg',
@@ -516,7 +516,7 @@ const PROJECTS = [
     id:       'straight-edge',
     title:    'Straight Edge',
     category: 'Posters',
-    desc:     '',
+    desc:     'A poster design built around straight edge culture.',
     thumb:    'assets/work/Straight Edge-Posters.jpg',
     images:   [
       'assets/work/Straight Edge-Posters.jpg',
@@ -529,7 +529,7 @@ const PROJECTS = [
     id:       'synthwave-fingerboard-graphic',
     title:    'Synthwave Fingerboard Graphic',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'A synthwave-styled fingerboard deck graphic.',
     thumb:    'assets/work/Synthwave Fingerboard Graphic-Graphic design.jpg',
     images:   [
       'assets/work/Synthwave Fingerboard Graphic-Graphic design.jpg'
@@ -541,7 +541,7 @@ const PROJECTS = [
     id:       'the-eye-is-the-lamp-of-the-body',
     title:    'The Eye Is The Lamp Of The Body',
     category: 'Poster Design',
-    desc:     '',
+    desc:     'A faith-themed poster design.',
     thumb:    'assets/work/The Eye Is The Lamp Of The Body-Posters.jpg',
     images:   [
       'assets/work/The Eye Is The Lamp Of The Body-Posters.jpg'
@@ -553,7 +553,7 @@ const PROJECTS = [
     id:       'things-fingerboard-graphics',
     title:    'Things Fingerboard Graphics',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'Fingerboard deck graphic design.',
     thumb:    'assets/work/Things Fingerboard Graphics-Graphic Design.jpg',
     images:   [
       'assets/work/Things Fingerboard Graphics-Graphic Design.jpg',
@@ -566,7 +566,7 @@ const PROJECTS = [
     id:       'broken-horns',
     title:    'Broken Horns',
     category: 'Vector Graphics',
-    desc:     '',
+    desc:     'A vectorized graphic piece.',
     thumb:    'assets/work/Broken Horns-Vector Graphics.jpg',
     images:   [
       'assets/work/Broken Horns-Vector Graphics.jpg'
@@ -578,7 +578,7 @@ const PROJECTS = [
     id:       'fernish-logo',
     title:    'Fernish Logo',
     category: 'Logo Design',
-    desc:     '',
+    desc:     'Logo design for Fernish Pty Ltd, a landscape installation and maintenance company.',
     thumb:    'assets/work/Fernish Logo-Logo Design.jpg',
     images:   [
       'assets/work/Fernish Logo-Logo Design.jpg'
@@ -590,7 +590,7 @@ const PROJECTS = [
     id:       'tinnitus',
     title:    'Tinnitus',
     category: 'Poster Design',
-    desc:     '',
+    desc:     'A poster design on the theme of tinnitus.',
     thumb:    'assets/work/Tinnitus-Poster Design.jpg',
     images:   [
       'assets/work/Tinnitus-Poster Design.jpg',
@@ -603,7 +603,7 @@ const PROJECTS = [
     id:       'sober-minder-fingerboard-graphic',
     title:    'Sober Minder Fingerboard Graphic',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'Fingerboard deck graphic design.',
     thumb:    'assets/work/Sober-Minder-Fingerboard-Graphic-Graphic-Design.jpg',
     images:   [
       'assets/work/Sober-Minder-Fingerboard-Graphic-Graphic-Design.jpg'
@@ -615,7 +615,7 @@ const PROJECTS = [
     id:       'all-lives-matter',
     title:    'All Lives Matter',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'A hand-lettered graphic design piece.',
     thumb:    'assets/work/All Lives Matter-Graphic Design.jpg',
     images:   [
       'assets/work/All Lives Matter-Graphic Design.jpg',
@@ -629,7 +629,7 @@ const PROJECTS = [
     id:       'cubemc-cube',
     title:    'Cubemc Cube',
     category: 'Vector Graphics',
-    desc:     '',
+    desc:     'A vectorized graphic piece.',
     thumb:    'assets/work/Cubemc Cube-Vector Graphics.jpg',
     images:   [
       'assets/work/Cubemc Cube-Vector Graphics.jpg'
@@ -641,7 +641,7 @@ const PROJECTS = [
     id:       'faith',
     title:    'Faith',
     category: 'Graphic Design',
-    desc:     '',
+    desc:     'A faith-themed graphic design piece.',
     thumb:    'assets/work/Faith-Graphic Design.jpg',
     images:   [
       'assets/work/Faith-Graphic Design.jpg'
@@ -653,7 +653,7 @@ const PROJECTS = [
     id:       'juno-106-synthesizer',
     title:    'Juno-106 Synthesizer',
     category: 'Vector Graphics',
-    desc:     '',
+    desc:     'A vectorized illustration of the Roland Juno-106 synthesizer.',
     thumb:    'assets/work/Juno-106 Synthesizer-Vector Graphics.jpg',
     images:   [
       'assets/work/Juno-106 Synthesizer-Vector Graphics.jpg'
@@ -665,7 +665,7 @@ const PROJECTS = [
     id:       'moogerfooger-mf-102-ring-modulator',
     title:    'Moogerfooger MF-102 Ring Modulator',
     category: 'Vector Graphics',
-    desc:     '',
+    desc:     'A vectorized illustration of the Moogerfooger MF-102 pedal.',
     thumb:    'assets/work/Moogerfooger MF-102 Ring Modulator-Vector Graphics.jpg',
     images:   [
       'assets/work/Moogerfooger MF-102 Ring Modulator-Vector Graphics.jpg'
@@ -677,7 +677,7 @@ const PROJECTS = [
     id:       'moogerfooger-mf-104m-analog-delay',
     title:    'Moogerfooger MF-104M Analog Delay',
     category: 'Vector Graphics',
-    desc:     '',
+    desc:     'A vectorized illustration of the Moogerfooger MF-104M pedal.',
     thumb:    'assets/work/Moogerfooger MF-104M Analog Delay-Vector Graphics.jpg',
     images:   [
       'assets/work/Moogerfooger MF-104M Analog Delay-Vector Graphics.jpg'
@@ -689,7 +689,7 @@ const PROJECTS = [
     id:       'moogerfooger-mf-108m-vectorization',
     title:    'Moogerfooger MF-108M Vectorization',
     category: 'Vector Graphics',
-    desc:     '',
+    desc:     'A vectorized illustration of the Moogerfooger MF-108M pedal.',
     thumb:    'assets/work/Moogerfooger MF-108M Vectorization-Vector Graphics.jpg',
     images:   [
       'assets/work/Moogerfooger MF-108M Vectorization-Vector Graphics.jpg'
@@ -701,7 +701,7 @@ const PROJECTS = [
     id:       'moogerfooger-midi-murf',
     title:    'Moogerfooger MIDI MuRF',
     category: 'Vector Graphics',
-    desc:     '',
+    desc:     'A vectorized illustration of the Moogerfooger MIDI MuRF pedal.',
     thumb:    'assets/work/Moogerfooger MIDI MuRF-Vector Graphics.jpg',
     images:   [
       'assets/work/Moogerfooger MIDI MuRF-Vector Graphics.jpg'
@@ -713,7 +713,7 @@ const PROJECTS = [
     id:       'table-in-the-wilderness-logo',
     title:    'Table In The Wilderness Logo',
     category: 'Logo Design',
-    desc:     '',
+    desc:     'Logo design for Table In The Wilderness.',
     thumb:    'assets/work/Table In The Wilderness Logo-Logo Design.jpg',
     images:   [
       'assets/work/Table In The Wilderness Logo-Logo Design.jpg'
