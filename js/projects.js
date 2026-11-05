@@ -66,6 +66,19 @@ const PROJECTS = [
   },
 
   {
+    id:       'baphomet-poster',
+    title:    'Baphomet',
+    category: 'Posters',
+    desc:     'A black-metal-inspired poster design featuring a Baphomet illustration, distressed typography and thorned borders.',
+    thumb:    'assets/work/Pierced-Baphomet.jpg',
+    images:   [
+      'assets/work/Pierced-Baphomet.jpg',
+      'assets/work/Pierced-Baphomet-2.jpg'
+    ],
+    size:     'sm'
+  },
+
+  {
     id:       'mental-health-poster',
     title:    'Mental Health',
     category: 'Posters',
