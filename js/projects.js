@@ -29,6 +29,18 @@
    ========================================================= */
 
 const PROJECTS = [
+{
+    id:       'Metal-For-Emmanuel-Poster',
+    title:    'Metal For Emmanuel',
+    category: 'Posters',
+    desc:     'Poster design for Christian metal band "Metal For Emmanuel" to promote their new album titled "New Jerusalem".',
+    thumb:    'assets/work/Metal-For-Emmanuel-Poster.jpg',
+    images:   [
+      'assets/work/Metal-For-Emmanuel-Poster.jpg'
+    ],
+    size:     'sm'
+  },
+
   {
     id:       'burning-eyes-poster',
     title:    'Burning Eyes',
