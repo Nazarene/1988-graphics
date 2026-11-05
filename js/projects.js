@@ -53,6 +53,19 @@ const PROJECTS = [
     size:     'sm'
   },
 
+   {
+    id:       'baphomet-poster',
+    title:    'Blaspheme The Baphomet',
+    category: 'Posters',
+    desc:     'A black-metal-inspired poster design featuring a Baphomet head being cut in half.',
+    thumb:    'assets/work/Axe To Grind With Satan.jpg',
+    images:   [
+      'assets/work/Axe To Grind With Satan.jpg',
+      'assets/work/Axe To Grind With Satan 2.jpg'
+    ],
+    size:     'sm'
+  },
+
   {
     id:       'dont-skip-the-dentist-poster',
     title:    'Don\'t Skip the Dentist',
@@ -79,7 +92,7 @@ const PROJECTS = [
 
   {
     id:       'baphomet-poster',
-    title:    'Baphomet',
+    title:    'Blaspheme The Baphomet',
     category: 'Posters',
     desc:     'A black-metal-inspired poster design featuring a Baphomet illustration, distressed typography and thorned borders.',
     thumb:    'assets/work/Pierced-Baphomet.jpg',
